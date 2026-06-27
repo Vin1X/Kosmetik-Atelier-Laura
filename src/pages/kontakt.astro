@@ -1,7 +1,163 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-  konta
+<Layout title="Kontakt & Anfahrt">
+  <main class="max-w-4xl mx-auto px-6 pt-8 pb-16">
+    <!-- <h1
+      class="font-serif text-3xl text-custom-green text-center mb-12 tracking-wide"
+    >
+      Kontakt & Anfahrt
+    </h1> -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Left col -->
+      <div class="flex flex-col gap-8">
+        <!-- Address -->
+        <div>
+          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+            Adresse
+          </h2>
+          <address class="not-italic text-gray-600 text-sm leading-relaxed">
+            Kosmetik Atelier Laura<br />
+            Falkenseer Chaussee 262<br />
+            13583 Berlin Spandau
+          </address>
+        </div>
+
+        <!-- Availability -->
+        <div>
+          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+            Erreichbarkeit
+          </h2>
+          <ul class="text-sm text-gray-600 leading-relaxed flex flex-col gap-1">
+            <li>
+              <a
+                href="tel:+493723560"
+                class="hover:text-custom-light-green transition-colors duration-200"
+              >
+                📞 030/372 35 60
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:info@kosmetik-atelier-laura.at"
+                class="hover:text-custom-light-green transition-colors duration-200"
+              >
+                ✉️ Katarzyna.Walura@KosmetikAtelierLaura.de
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours -->
+        <div>
+          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+            Öffnungszeiten
+          </h2>
+          <ul class="text-sm text-gray-600 leading-relaxed flex flex-col gap-1">
+            <li class="flex gap-6">
+              <span class="w-16">Mo – Fr</span><span>09:00 – 17:00</span>
+            </li>
+            <li class="flex gap-6">
+              <span class="w-16">Sa & So</span><span>Geschlossen</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Appointments -->
+        <div>
+          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+            Terminvereinbarung
+          </h2>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Termine bitte vor Ort oder telefonisch vereinbaren.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right col -->
+      <div class="flex flex-col gap-3">
+        <h2 class="font-serif text-lg text-custom-green tracking-wide">
+          Karte
+        </h2>
+
+        <!-- Placeholder -->
+        <div
+          id="maps-placeholder"
+          class="relative w-full h-72 md:h-full min-h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-4 text-center p-6 cursor-pointer group"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-10 h-10 text-gray-300 group-hover:text-custom-light-green transition-colors duration-200"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+            ></path>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          </svg>
+          <div>
+            <p class="text-sm text-gray-500 mb-1">
+              Die Karte wird von Google Maps bereitgestellt.
+            </p>
+            <p class="text-xs text-gray-500 mb-4">
+              Mit dem Laden akzeptieren Sie die
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="underline hover:text-custom-light-green transition-colors"
+                onclick="event.stopPropagation()"
+                >Datenschutzrichtlinien von Google</a
+              >. Dabei werden Daten an Google-Server übertragen.
+            </p>
+          </div>
+          <button
+            id="maps-load-btn"
+            class="px-5 py-2 text-sm font-serif tracking-wide border border-custom-green text-custom-green hover:bg-custom-green hover:text-white transition-colors duration-200 rounded"
+          >
+            Karte laden
+          </button>
+        </div>
+
+        <iframe
+          id="maps-iframe"
+          class="hidden w-full h-72 md:h-full min-h-64 rounded-lg border border-gray-200"
+          data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2426.2382361028076!2d13.182368276928733!3d52.54721543421387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a856186f946e77%3A0xcf58634464b78c67!2sKosmetik%20Atelier%20Laura!5e0!3m2!1sde!2sde!4v1782574173067!5m2!1sde!2sde"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </div>
+  </main>
 </Layout>
+
+<script>
+  const placeholder = document.getElementById("maps-placeholder");
+  const iframe = document.getElementById(
+    "maps-iframe",
+  ) as HTMLIFrameElement | null;
+  const btn = document.getElementById("maps-load-btn");
+
+  function loadMap() {
+    if (!iframe || !placeholder) return;
+    const src = iframe.getAttribute("data-src");
+    if (src) iframe.src = src;
+    placeholder.classList.add("hidden");
+    iframe.classList.remove("hidden");
+  }
+
+  btn?.addEventListener("click", loadMap);
+  placeholder?.addEventListener("click", loadMap);
+</script>
