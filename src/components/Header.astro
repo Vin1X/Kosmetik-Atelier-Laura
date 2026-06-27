@@ -70,7 +70,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             <li>
                 <a
                     href="/preisliste"
-                    class={`font-serif tracking-wide text-lg transition-colors duration-200 ${isActive("preisliste") ? "text-custom-green font-semibold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    class={`font-sans font-semibold tracking-wide text-lg transition-colors duration-200 ${isActive("preisliste") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
                     aria-current={isActive("preisliste") ? "page" : undefined}
                 >
                     Preisliste
@@ -78,17 +78,8 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             </li>
             <li>
                 <a
-                    href="/anfahrt"
-                    class={`uppercase font-semibold font-sans tracking-wide text-lg transition-colors duration-200 ${isActive("anfahrt") ? "text-custom-green font-semibold" : "text-gray-600 hover:text-custom-light-green"}`}
-                    aria-current={isActive("anfahrt") ? "page" : undefined}
-                >
-                    Anfahrt
-                </a>
-            </li>
-            <li>
-                <a
                     href="/kontakt"
-                    class={`uppercase font-serif tracking-wide text-lg transition-colors duration-200 ${isActive("kontakt") ? "text-custom-green font-semibold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    class={`font-sans font-semibold tracking-wide text-lg transition-colors duration-200 ${isActive("kontakt") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
                     aria-current={isActive("kontakt") ? "page" : undefined}
                 >
                     Kontakt
