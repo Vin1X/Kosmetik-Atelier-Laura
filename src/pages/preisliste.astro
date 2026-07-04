@@ -1,5 +1,318 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+type Extra = { label: string; price: string };
+type Item = {
+  name: string;
+  price: string;
+  description?: string;
+  extras?: Extra[];
+  packages?: Extra[];
+};
+type Category = { title: string; description?: string; items: Item[] };
+
+const categories: Category[] = [
+  {
+    title: "Klassische Kosmetikbehandlung",
+    items: [
+      {
+        name: "Akne Behandlung",
+        price: "60 €",
+        description:
+          "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Maske, Abschlusspflege",
+      },
+      {
+        name: "Vitalkosmetik - Gesicht, Hals, Dekolleté",
+        price: "70 €",
+        description:
+          "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Intensivmassage, Maske, Abschlusspflege",
+      },
+      {
+        name: "Luxus Pur - Gesicht, Hals, Dekolleté",
+        price: "110 €",
+        description:
+          "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Augenbrauenkorrektur & -färben, Wimpern färben, Gesichtsenthaarung, Wirkstoffampulle, Intensivmassage, Maske, Abschlusspflege",
+      },
+      {
+        name: "Auszeit nehmen - Gesicht, Hals, Dekolleté",
+        price: "55 €",
+        description: "Intensivmassage & exklusive Maske",
+      },
+      {
+        name: "Männersache - Gesicht",
+        price: "60 €",
+        description:
+          "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Augenbrauenkorrektur, Intensivmassage, Maske, Abschlusspflege",
+      },
+      { name: "Zusätze", price: "" }, // Placeholder
+      { name: "Apparatives-Peeling", price: "+ 15 €" },
+      {
+        name: "Wirkstoffampulle",
+        price: "+ 8 €",
+        extras: [{ label: "Einneedeln der Wirkstoffampulle", price: "+ 40 €" }],
+      },
+      { name: "Sheet Maske", price: "+ 6 €" },
+    ],
+  },
+  {
+    title: "Microneedling",
+    description: "Inkl. Wirkstoffkonzentrat & Bio-Cellulose-Maske",
+    items: [
+      {
+        name: "Gesicht",
+        price: "179 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "149 €",
+          },
+        ],
+      },
+      {
+        name: "Gesicht + Hals",
+        price: "229 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "199 €",
+          },
+        ],
+      },
+      {
+        name: "Gesicht + Hals + Dekolleté",
+        price: "279 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "249 €",
+          },
+        ],
+      },
+      { name: "Zusätze", price: "" }, // Placeholder
+      { name: "Mit Stahlnadeln", price: "+ 10 €" },
+      { name: "Wirkstoffampulle", price: "+ 8 €" },
+    ],
+  },
+
+  {
+    title: "Kristall Mikrodermabrasion",
+    description: "", // #TODO add descr
+    items: [
+      {
+        name: "Gesicht",
+        price: "115 €",
+        extras: [
+          { label: "Mit Wirkstoffampulle", price: "+ 8 €" },
+          { label: "Mit Bio-Cellulose-Maske", price: "+ 15 €" },
+        ],
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "95 €",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Kristallstaub - Kombinationsbehandlung",
+    description: "Inkl. Wirkstoffkonzentrat & Bio-Cellulose-Maske",
+    items: [
+      {
+        name: "Microneedling (Gesicht) + Kristall Mikrodermabrasion",
+        price: "270 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "232 €",
+          },
+        ],
+      },
+      {
+        name: "Microneedling (Gesicht + Hals) + Kristall Mikrodermabrasion",
+        price: "316 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "279 €",
+          },
+        ],
+      },
+      {
+        name: "Microneedling (Gesicht + Hals + Dekolleté) + Kristall Mikrodermabrasion",
+        price: "362 €",
+        packages: [
+          {
+            label:
+              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            price: "327 €",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Rund ums Auge",
+    items: [
+      { name: "Augenbrauenkorrektur", price: "ab 16,50 €" },
+      { name: "Augenbrauen oder Wimpern färben", price: "je 16,50 €" },
+      { name: "Augenbrauen & Wimpern färben", price: "29,50 €" },
+      {
+        name: "Komplettpaket",
+        price: "45 €",
+        description: "Inkl. Augenpartiemassage",
+      },
+    ],
+  },
+  {
+    title: "Für Ihre Hände",
+    items: [
+      { name: "Maniküre", price: "33 €" },
+      {
+        name: "Maniküre Deluxe",
+        price: "43 €",
+        description: "Mit Massage und Peeling",
+      },
+      { name: "Nagellack", price: "7 €" },
+      {
+        name: "UV-Lack",
+        price: "19 €",
+        extras: [{ label: "Extras", price: "ab 1 € Aufpreis" }],
+      },
+      { name: "Entfernen von UV-Lack", price: "7 €" },
+      { name: "Paraffinbad", price: "14 €" },
+    ],
+  },
+  {
+    title: "Für Ihre Füße",
+    items: [
+      {
+        name: "Fußpflege",
+        description: "Nach medizinischen Richtlinien",
+        price: "42 €",
+      },
+      { name: "Fußpflege Deluxe", price: "60 €", description: "Inkl. Massage" },
+      { name: "Fußreflexzonenmassage", price: "35,50 €" },
+      { name: "Nagellack", price: "7 €" },
+      {
+        name: "UV-Lack",
+        price: "19 €",
+        extras: [{ label: "Extras", price: "ab 1 € Aufpreis" }],
+      },
+      { name: "Entfernen von UV-Lack", price: "7 €" },
+    ],
+  },
+
+  {
+    title: "Haarentfernung mit Wachs",
+    items: [
+      { name: "Damenbart, Kinn oder Wangen", price: "je 13,50 €" },
+      {
+        name: "Damenbart + Kinn + Wangen",
+        price: "37 €",
+        description: "Inkl. Maske",
+      },
+      { name: "Unterschenkel mit Knie", price: "38,50 €" },
+      { name: "Unterschenkel + Oberschenkel", price: "52,50 €" },
+    ],
+  },
+];
 ---
 
-<Layout title="Preisliste"> Preise </Layout>
+<Layout title="Preisliste – Kosmetik Atelier Laura">
+  <main class="max-w-3xl mx-auto px-6 pt-8 pb-16">
+    <p class="text-center text-sm text-gray-400 font-serif mb-12 tracking-wide">
+      Alle Preise inkl. MwSt. · Änderungen vorbehalten
+    </p>
+
+    <div class="flex flex-col gap-3">
+      {
+        categories.map((cat) => (
+          <details class="group overflow-hidden" open={cat.open}>
+            <summary class="flex justify-between items-center px-5 py-4 cursor-pointer list-none select-none hover:bg-gray-50 transition-colors duration-200 border-b border-gray-200 rounded-lg">
+              <h2 class="font-serif text-lg text-custom-green tracking-wide">
+                {cat.title}
+              </h2>
+              <svg
+                class="w-4 h-4 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-4">
+              {cat.description && (
+                <p class="text-sm text-gray-400 mb-3 pt-1">{cat.description}</p>
+              )}
+
+              <ul class="flex flex-col divide-y divide-gray-100">
+                {cat.items.map((item) => (
+                  <li class="py-3">
+                    <div class="flex justify-between items-baseline gap-4">
+                      {item.name === "Zusätze" ? (
+                        <span class="text-gray-600 font-serif text-sm font-semibold tracking-wide">
+                          {item.name}
+                        </span>
+                      ) : (
+                        <span class="text-gray-700 font-serif text-sm">
+                          {item.name}
+                        </span>
+                      )}
+                      <span class="text-custom-green font-semibold text-sm whitespace-nowrap">
+                        {item.price}
+                      </span>
+                    </div>
+
+                    {item.description && (
+                      <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">
+                        {item.description}
+                      </p>
+                    )}
+
+                    {item.extras && item.extras.length > 0 && (
+                      <ul class="mt-1.5 flex flex-col gap-0.5">
+                        {item.extras.map((e) => (
+                          <li class="flex justify-between text-xs text-gray-500 italic">
+                            <span>{e.label}</span>
+                            <span class="whitespace-nowrap">{e.price}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {item.packages && item.packages.length > 0 && (
+                      <ul class="mt-2 flex flex-col gap-0.5 bg-gray-50 rounded px-3 py-2">
+                        {item.packages.map((p) => (
+                          <li class="flex justify-between text-xs text-gray-500">
+                            <span>{p.label}</span>
+                            <span class="text-custom-green whitespace-nowrap font-medium">
+                              {p.price}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </main>
+</Layout>
