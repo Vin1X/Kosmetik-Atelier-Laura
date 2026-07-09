@@ -69,6 +69,15 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
         >
             <li>
                 <a
+                    href="/"
+                    class={`font-serif text-3xl tracking-wide transition-colors duration-200 ${isActive("") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    aria-current={isActive("") ? "page" : undefined}
+                >
+                    Start
+                </a>
+            </li>
+            <li>
+                <a
                     href="/preisliste"
                     class={`font-serif text-3xl tracking-wide transition-colors duration-200 ${isActive("preisliste") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
                     aria-current={isActive("preisliste") ? "page" : undefined}
