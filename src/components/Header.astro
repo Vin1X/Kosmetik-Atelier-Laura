@@ -7,7 +7,7 @@ const current = pathname.replace(/^\/|\/$/g, "");
 const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
 ---
 
-<div class="py-10">
+<div class="py-10 bg-custom-green">
     <div class="flex justify-center pb-10">
         <a href="/" aria-label="Zur Startseite"
             ><Image
@@ -26,7 +26,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             aria-controls="main-nav"
             aria-expanded="false"
             aria-label="Menü öffnen"
-            class="p-2 text-gray-600 hover:text-custom-green transition-colors duration-200"
+            class="p-2 text-gray-300 hover:text-custom-gold transition-colors duration-200"
         >
             <svg
                 id="icon-open"
@@ -65,12 +65,18 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
         class="justify-center hidden md:flex"
     >
         <ul
-            class="flex flex-col md:flex-row items-center gap-4 md:gap-6 p-3 tracking-wide"
+            class="flex flex-col md:flex-row items-center gap-4 md:gap-8 p-3 tracking-wide"
         >
             <li>
                 <a
                     href="/"
-                    class={`font-serif text-3xl tracking-wide transition-colors duration-200 ${isActive("") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    class={`relative font-serif text-3xl tracking-wide transition-colors duration-200 pb-2 block
+                    after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-custom-gold after:transition-all after:duration-300
+                    ${
+                        isActive("")
+                            ? "text-custom-gold font-bold after:w-full"
+                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                    }`}
                     aria-current={isActive("") ? "page" : undefined}
                 >
                     Start
@@ -79,7 +85,13 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             <li>
                 <a
                     href="/preisliste"
-                    class={`font-serif text-3xl tracking-wide transition-colors duration-200 ${isActive("preisliste") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    class={`relative font-serif text-3xl tracking-wide transition-colors duration-200 pb-2 block
+                    after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-custom-gold after:transition-all after:duration-300
+                    ${
+                        isActive("preisliste")
+                            ? "text-custom-gold font-bold after:w-full"
+                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                    }`}
                     aria-current={isActive("preisliste") ? "page" : undefined}
                 >
                     Preisliste
@@ -88,7 +100,13 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             <li>
                 <a
                     href="/kontakt"
-                    class={`font-serif text-3xl tracking-wide transition-colors duration-200 ${isActive("kontakt") ? "text-custom-green font-bold" : "text-gray-600 hover:text-custom-light-green"}`}
+                    class={`relative font-serif text-3xl tracking-wide transition-colors duration-200 pb-2 block
+                    after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:h-0.5 after:bg-custom-gold after:transition-all after:duration-300
+                    ${
+                        isActive("kontakt")
+                            ? "text-custom-gold font-bold after:w-full"
+                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                    }`}
                     aria-current={isActive("kontakt") ? "page" : undefined}
                 >
                     Kontakt
