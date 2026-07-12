@@ -7,16 +7,20 @@ const current = pathname.replace(/^\/|\/$/g, "");
 const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
 ---
 
-<div class="py-10 bg-custom-green">
+<div class="py-6 md:py-10 bg-custom-green">
     <div class="flex justify-center pb-10">
-        <a href="/" aria-label="Zur Startseite"
-            ><Image
+        <a
+            href="/"
+            aria-label="Zur Startseite"
+            class="block w-full max-w-50 md:max-w-87.5"
+        >
+            <Image
                 src={logo_signed}
                 alt="Kosmetik Atelier Laura Logo"
                 inferSize={true}
-                width={350}
-            /></a
-        >
+                class="w-full h-auto"
+            />
+        </a>
     </div>
 
     <!-- Hamburger Menu for mobile -->
