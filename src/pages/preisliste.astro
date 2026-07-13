@@ -225,100 +225,92 @@ const categories: Category[] = [
 ];
 ---
 
-<Layout title="Preisliste">
-  <main class="w-full bg-custom-green min-h-screen pt-8 pb-16 px-4 md:px-8">
-    <div class="max-w-3xl mx-auto w-full">
-      <p
-        class="text-center text-sm text-gray-400 font-serif mb-12 tracking-wide"
-      >
-        Alle Preise inkl. MwSt. · Änderungen vorbehalten
-      </p>
+<Layout title="Preisliste" isTextPage={true}>
+  <p class="text-center text-sm text-gray-400 font-serif mb-12 tracking-wide">
+    Alle Preise inkl. MwSt. · Änderungen vorbehalten
+  </p>
 
-      <div class="flex flex-col gap-3">
-        {
-          categories.map((cat) => (
-            <details class="group overflow-hidden" open={cat.open}>
-              <summary class="flex justify-between items-center px-5 py-2 cursor-pointer list-none select-none transition-colors duration-200 border-b border-gray-200 rounded">
-                <h2 class="font-serif text-lg text-gray-300 tracking-wide group-hover:text-custom-light-gold">
-                  {cat.title}
-                </h2>
-                <svg
-                  class="w-4 h-4 text-gray-400 transition-transform duration-200 group-open:rotate-180"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
+  <div class="flex flex-col gap-3">
+    {
+      categories.map((cat) => (
+        <details class="group overflow-hidden" open={cat.open}>
+          <summary class="flex justify-between items-center px-5 py-2 cursor-pointer list-none select-none transition-colors duration-200 border-b border-gray-200 rounded">
+            <h2 class="font-serif text-lg text-gray-300 tracking-wide group-hover:text-custom-light-gold">
+              {cat.title}
+            </h2>
+            <svg
+              class="w-4 h-4 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </summary>
 
-              <div class="px-5 pb-4">
-                {cat.description && (
-                  <p class="text-sm text-gray-400 mb-3 pt-1">
-                    {cat.description}
-                  </p>
-                )}
+          <div class="px-5 pb-4">
+            {cat.description && (
+              <p class="text-sm text-gray-400 mb-3 pt-1">{cat.description}</p>
+            )}
 
-                <ul class="flex flex-col divide-y divide-gray-300">
-                  {cat.items.map((item) => (
-                    <li class="py-3">
-                      <div class="flex justify-between items-baseline gap-4">
-                        {item.name === "Zusätze" ? (
-                          <span class="text-gray-300 font-serif text-sm font-semibold tracking-wide mt-6">
-                            {item.name}
+            <ul class="flex flex-col divide-y divide-gray-300">
+              {cat.items.map((item) => (
+                <li class="py-3">
+                  <div class="flex justify-between items-baseline gap-4">
+                    {item.name === "Zusätze" ? (
+                      <span class="text-gray-300 font-serif text-sm font-semibold tracking-wide mt-6">
+                        {item.name}
+                      </span>
+                    ) : (
+                      <span class="text-gray-300 font-serif text-sm">
+                        {item.name}
+                      </span>
+                    )}
+                    <span class="text-custom-gold font-semibold text-sm whitespace-nowrap">
+                      {item.price}
+                    </span>
+                  </div>
+
+                  {item.description && (
+                    <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">
+                      {item.description}
+                    </p>
+                  )}
+
+                  {item.extras && item.extras.length > 0 && (
+                    <ul class="mt-1.5 flex flex-col gap-0.5">
+                      {item.extras.map((e) => (
+                        <li class="flex justify-between text-xs text-gray-400 italic">
+                          <span>{e.label}</span>
+                          <span class="whitespace-nowrap">{e.price}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {item.packages && item.packages.length > 0 && (
+                    <ul class="mt-2 flex flex-col gap-0.5 bg-custom-green rounded px-3 py-2">
+                      {item.packages.map((p) => (
+                        <li class="flex justify-between text-xs text-gray-400">
+                          <span>{p.label}</span>
+                          <span class="text-custom-gold whitespace-nowrap font-medium">
+                            {p.price}
                           </span>
-                        ) : (
-                          <span class="text-gray-300 font-serif text-sm">
-                            {item.name}
-                          </span>
-                        )}
-                        <span class="text-custom-gold font-semibold text-sm whitespace-nowrap">
-                          {item.price}
-                        </span>
-                      </div>
-
-                      {item.description && (
-                        <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">
-                          {item.description}
-                        </p>
-                      )}
-
-                      {item.extras && item.extras.length > 0 && (
-                        <ul class="mt-1.5 flex flex-col gap-0.5">
-                          {item.extras.map((e) => (
-                            <li class="flex justify-between text-xs text-gray-400 italic">
-                              <span>{e.label}</span>
-                              <span class="whitespace-nowrap">{e.price}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-
-                      {item.packages && item.packages.length > 0 && (
-                        <ul class="mt-2 flex flex-col gap-0.5 bg-custom-green rounded px-3 py-2">
-                          {item.packages.map((p) => (
-                            <li class="flex justify-between text-xs text-gray-400">
-                              <span>{p.label}</span>
-                              <span class="text-custom-gold whitespace-nowrap font-medium">
-                                {p.price}
-                              </span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </details>
-          ))
-        }
-      </div>
-    </div>
-  </main>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </details>
+      ))
+    }
+  </div>
 </Layout>

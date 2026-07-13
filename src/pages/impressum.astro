@@ -2,48 +2,44 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Impressum">
-  <main class="px-6 pt-8 pb-16 bg-custom-green">
-    <div class="max-w-3xl mx-auto w-full">
-      <div class="flex flex-col gap-10">
-        <section>
-          <h2
-            class="font-serif text-xl text-gray-300 tracking-wide mb-4 pb-2 border-b border-gray-200"
+<Layout title="Impressum" isTextPage={true}>
+  <div class="flex flex-col gap-10">
+    <section>
+      <h2
+        class="font-serif text-xl text-gray-300 tracking-wide mb-4 pb-2 border-b border-gray-200"
+      >
+        Angaben gemäß § 5 DDG /
+        <br />
+        Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+      </h2>
+      <address
+        class="not-italic text-sm text-gray-300 leading-relaxed flex flex-col gap-1"
+      >
+        <span>Katarzyna Walura</span>
+        <span>Kosmetik Atelier Laura</span>
+        <span>Falkenseer Chaussee 262</span>
+        <span>13583 Berlin</span>
+      </address>
+      <ul class="mt-4 text-sm text-gray-300 flex flex-col gap-1">
+        <li>
+          Telefon:<span class="ml-1"></span>
+          <a
+            href="tel:+49303723560"
+            class="hover:text-custom-light-gold transition-colors duration-200"
           >
-            Angaben gemäß § 5 DDG /
-            <br />
-            Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
-          </h2>
-          <address
-            class="not-italic text-sm text-gray-300 leading-relaxed flex flex-col gap-1"
+            030 / 372 35 60
+          </a>
+        </li>
+        <li>
+          E-Mail:<span class="ml-1"></span>
+          <a
+            href="mailto:Katarzyna.Walura@KosmetikAtelierLaura.de"
+            class="hover:text-custom-light-gold transition-colors duration-200"
           >
-            <span>Katarzyna Walura</span>
-            <span>Kosmetik Atelier Laura</span>
-            <span>Falkenseer Chaussee 262</span>
-            <span>13583 Berlin</span>
-          </address>
-          <ul class="mt-4 text-sm text-gray-300 flex flex-col gap-1">
-            <li>
-              Telefon:<span class="ml-1"></span>
-              <a
-                href="tel:+49303723560"
-                class="hover:text-custom-light-gold transition-colors duration-200"
-              >
-                030 / 372 35 60
-              </a>
-            </li>
-            <li>
-              E-Mail:<span class="ml-1"></span>
-              <a
-                href="mailto:Katarzyna.Walura@KosmetikAtelierLaura.de"
-                class="hover:text-custom-light-gold transition-colors duration-200"
-              >
-                Katarzyna.Walura@KosmetikAtelierLaura.de
-              </a>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </div>
-  </main>
+            Katarzyna.Walura@KosmetikAtelierLaura.de
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
 </Layout>
