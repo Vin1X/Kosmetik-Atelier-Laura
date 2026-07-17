@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import localBirdImage from "../assets/image1.jpeg";
 ---
 
 <Layout title="Kosmetik Atelier Laura">
@@ -7,9 +10,9 @@ import Layout from "../layouts/Layout.astro";
         <div
             class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center md:text-left md:items-start"
         >
-            <h1 class="font-serif text-white leading-tight mb-4">
+            <h1 class="leading-tight mb-4">
                 <span
-                    class="block text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight uppercase"
+                    class="block text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight uppercase text-custom-white font-serif"
                 >
                     Ihr Vertrauen
                 </span>
@@ -23,17 +26,17 @@ import Layout from "../layouts/Layout.astro";
             <div
                 class="flex items-center gap-3 my-8 justify-center md:justify-start w-full"
             >
-                <div class="h-px w-10 bg-custom-gold/60"></div>
+                <div class="h-px w-10 bg-custom-gold"></div>
                 <svg
                     viewBox="0 0 40 12"
-                    class="w-10 h-3 fill-custom-gold/60"
+                    class="w-10 h-3 fill-custom-gold"
                     xmlns="http://www.w3.org/2000/svg"
                 >
                     <path
                         d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
                     ></path>
                 </svg>
-                <div class="h-px w-10 bg-custom-gold/60"></div>
+                <div class="h-px w-10 bg-custom-gold"></div>
             </div>
 
             <ul
@@ -41,7 +44,7 @@ import Layout from "../layouts/Layout.astro";
             >
                 <li class="flex items-center gap-4">
                     <div
-                        class="w-12 h-12 rounded-full border-2 border-custom-gold/60 flex items-center justify-center shrink-0"
+                        class="w-12 h-12 rounded-full border-2 border-custom-gold flex items-center justify-center shrink-0"
                     >
                         <svg
                             viewBox="0 0 24 24"
@@ -55,19 +58,18 @@ import Layout from "../layouts/Layout.astro";
                         </svg>
                     </div>
                     <p
-                        class="text-gray-300 font-serif text-lg md:text-2xl leading-relaxed"
+                        class="text-custom-white font-serif text-lg md:text-2xl leading-relaxed"
                     >
-                        Zeit, Ruhe und ein offenes Ohr.<br
-                            class="hidden sm:inline"
-                        />So empfangen und begleiten wir Sie.
+                        Zeit, Ruhe und ein offenes Ohr.<br />So empfangen und
+                        begleiten wir Sie.
                     </p>
                 </li>
 
-                <hr class="ml-16 border-custom-gold/20" />
+                <hr class="ml-16 border-custom-gold" />
 
                 <li class="flex items-center gap-4">
                     <div
-                        class="w-12 h-12 rounded-full border-2 border-custom-gold/60 flex items-center justify-center shrink-0"
+                        class="w-12 h-12 rounded-full border-2 border-custom-gold flex items-center justify-center shrink-0"
                     >
                         <svg
                             viewBox="0 0 24 24"
@@ -80,7 +82,7 @@ import Layout from "../layouts/Layout.astro";
                         </svg>
                     </div>
                     <p
-                        class="text-gray-300 font-serif text-lg md:text-2xl leading-relaxed"
+                        class="text-custom-white font-serif text-lg md:text-2xl leading-relaxed"
                     >
                         Individuell. Wunschgemäß. Für Sie.
                     </p>
@@ -89,7 +91,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <section class="overflow-hidden py-16 px-4 bg-[#0B3C26]">
+    <section class="overflow-hidden py-16 px-4 bg-custom-green">
         <div
             class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 md:items-stretch"
         >
@@ -101,13 +103,13 @@ import Layout from "../layouts/Layout.astro";
                         Leidenschaft · Präzision · Perfektion
                     </p>
                     <p
-                        class="font-serif text-xl md:text-2xl text-gray-300 tracking-widest leading-snug uppercase"
+                        class="font-serif text-xl md:text-2xl text-custom-white tracking-widest leading-snug uppercase"
                     >
                         Nicht nur Worte –<br />sondern der Standard unserer
                         Arbeit.
                     </p>
                     <hr
-                        class="w-full h-px border border-custom-gold/60 my-6 rounded-lg"
+                        class="w-full h-px border border-custom-gold my-6 rounded-lg"
                     />
                 </div>
 
@@ -132,7 +134,7 @@ import Layout from "../layouts/Layout.astro";
                             },
                         ].map(({ icon, text }) => (
                             <li class="flex items-center gap-4 py-2">
-                                <div class="w-12 h-12 rounded-full border border-custom-gold/60 flex items-center justify-center shrink-0">
+                                <div class="w-12 h-12 rounded-full border border-custom-gold flex items-center justify-center shrink-0">
                                     <svg
                                         viewBox="0 0 24 24"
                                         class="w-3.5 h-3.5 stroke-custom-gold fill-none"
@@ -145,7 +147,7 @@ import Layout from "../layouts/Layout.astro";
                                         />
                                     </svg>
                                 </div>
-                                <p class="text-gray-300 text-sm leading-relaxed font-serif">
+                                <p class="text-custom-white text-sm leading-relaxed font-serif">
                                     {text}
                                 </p>
                             </li>
@@ -155,48 +157,40 @@ import Layout from "../layouts/Layout.astro";
             </div>
 
             <div class="relative h-full min-h-100 md:min-h-0">
-                <div
-                    class="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 text-sm tracking-widest uppercase border border-gray-200"
+                <!-- <div
+                    class="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center text-custom-light-white text-sm tracking-widest uppercase border border-gray-200"
                 >
                     [ Bild Placeholder ]
-                </div>
+                </div> -->
+                <Image
+                    src={localBirdImage}
+                    alt="A bird sitting on a nest of eggs."
+                    class="w-full rounded-lg flex items-center justify-center text-sm tracking-widest uppercase border border-gray-200"
+                />
                 <div
-                    class="absolute -bottom-4 -right-4 w-24 h-24 border border-custom-gold/30 rounded -z-10"
+                    class="absolute -bottom-4 -right-4 w-24 h-24 border border-custom-gold rounded -z-10"
                 >
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="flex items-center gap-3 justify-center py-4 bg-[#053321]">
-        <div class="h-px w-10 bg-custom-gold/60"></div>
+    <div class="flex items-center gap-3 justify-center py-4 bg-custom-green">
+        <div class="h-px w-10 bg-custom-gold"></div>
         <svg
             viewBox="0 0 40 12"
-            class="w-10 h-3 fill-custom-gold/60"
+            class="w-10 h-3 fill-custom-gold"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
                 d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
             ></path>
         </svg>
-        <div class="h-px w-10 bg-custom-gold/60"></div>
+        <div class="h-px w-10 bg-custom-gold"></div>
     </div>
 
-    <section class="px-4 py-8 md:py-16 bg-[#1f3020]">
+    <section class="px-4 py-8 md:py-16 bg-custom-green">
         <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-12">
-                <p
-                    class="text-custom-gold text-xs tracking-[0.3em] uppercase mb-3 font-sans"
-                >
-                    Unsere Leistungen
-                </p>
-                <h2
-                    class="font-serif text-2xl md:text-4xl text-gray-300 tracking-wide"
-                >
-                    Ganzheitliche Pflege für Sie
-                </h2>
-            </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {
                     [
@@ -204,24 +198,24 @@ import Layout from "../layouts/Layout.astro";
                             title: "Ganzheitliche Pflege",
                             sub: "Für Haut, Körper und Seele.",
                             icon: "M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 0",
-                            image: "Placeholder",
+                            image: { localBirdImage },
                         },
                         {
                             title: "Hochwertige Produkte",
-                            sub: "Natürliche Inhaltsstoffe. Sichtbare Ergebnisse.",
+                            sub: "Wirksame Inhaltsstoffe. Sichtbare Ergebnisse.",
                             icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
-                            image: "Placeholder",
+                            image: { localBirdImage },
                         },
                         {
                             title: "Exklusives Ambiente",
                             sub: "Luxus, der nicht laut ist – aber spürbar.",
                             icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
-                            image: "Placeholder",
+                            image: { localBirdImage },
                         },
                     ].map(({ title, sub, icon, image }) => (
-                        <div class="bg-[#274727] border-2 border-custom-gold rounded-lg flex flex-col items-center text-center hover:border-custom-gold/30 transition-colors duration-200 overflow-hidden">
+                        <div class="bg-custom-light-green border-2 border-custom-gold rounded-lg flex flex-col items-center text-center hover:border-custom-light-gold transition-colors duration-200 overflow-hidden">
                             <div class="p-8 pb-6 flex flex-col items-center gap-4 flex-1">
-                                <div class="w-14 h-14 rounded-full border-2 border-custom-gold/60 flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full border-2 border-custom-gold flex items-center justify-center">
                                     <svg
                                         viewBox="0 0 24 24"
                                         class="w-5 h-5 stroke-custom-gold fill-none"
@@ -238,15 +232,23 @@ import Layout from "../layouts/Layout.astro";
                                     <p class="font-sans text-xs tracking-[0.2em] uppercase text-custom-gold mb-2">
                                         {title}
                                     </p>
-                                    <p class="text-gray-300 text-sm font-serif leading-relaxed">
+                                    <p class="text-custom-white text-sm font-serif leading-relaxed">
                                         {sub}
                                     </p>
                                 </div>
                             </div>
 
-                            <div class="w-full aspect-4/3 bg-gray-100 flex items-center justify-center text-gray-400 text-sm tracking-widest border-t-custom-gold border-t-2">
+                            {/* <div class="w-full aspect-4/3 bg-gray-100 flex items-center justify-center text-custom-light-white text-sm tracking-widest border-t-custom-gold border-t-2">
                                 {image}
-                            </div>
+                            </div> */}
+                            <Image
+                                src={localBirdImage}
+                                alt="A bird sitting on a nest of eggs."
+                                class="w-full aspect-4/3 flex items-center justify-centertracking-widest border-t-custom-gold border-t-2"
+                                alt="image for {sub}"
+                                width="400"
+                                height="1000"
+                            />
                         </div>
                     ))
                 }
@@ -254,21 +256,21 @@ import Layout from "../layouts/Layout.astro";
         </div>
     </section>
 
-    <div class="flex items-center gap-3 justify-center py-4 bg-[#1f3020]">
-        <div class="h-px w-10 bg-custom-gold/60"></div>
+    <div class="flex items-center gap-3 justify-center py-4 bg-custom-green">
+        <div class="h-px w-10 bg-custom-gold"></div>
         <svg
             viewBox="0 0 40 12"
-            class="w-10 h-3 fill-custom-gold/60"
+            class="w-10 h-3 fill-custom-gold"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
                 d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
             ></path>
         </svg>
-        <div class="h-px w-10 bg-custom-gold/60"></div>
+        <div class="h-px w-10 bg-custom-gold"></div>
     </div>
 
-    <section class="mx-auto px-4 text-center py-8 md:py-16 bg-[#1f3020]">
+    <section class="mx-auto px-4 text-center py-8 md:py-16 bg-custom-green">
         <p
             class="text-custom-gold text-xl md:text-2xl tracking-[0.2em] uppercase mb-4 font-sans px-2"
         >
@@ -282,7 +284,7 @@ import Layout from "../layouts/Layout.astro";
 
         <a
             href="/kontakt"
-            class="inline-block w-full sm:w-auto px-8 py-4 rounded-lg border border-custom-gold text-custom-gold font-sans text-xs md:text-sm tracking-widest uppercase hover:bg-custom-gold hover:text-[#274727] transition-colors duration-200"
+            class="inline-block w-full sm:w-auto px-8 py-4 rounded-lg border border-custom-gold text-custom-gold font-sans text-xs md:text-sm tracking-widest uppercase hover:bg-custom-light-gold hover:text-custom-green transition-colors duration-200"
         >
             Jetzt kontaktieren und Termin vereinbaren
         </a>

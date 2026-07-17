@@ -16,7 +16,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
                 aria-controls="main-nav"
                 aria-expanded="false"
                 aria-label="Menü öffnen"
-                class="p-2 text-gray-300 hover:text-custom-gold transition-colors duration-200 relative"
+                class="p-2 text-custom-white hover:text-custom-gold transition-colors duration-200 relative"
             >
                 <svg
                     id="icon-open"
@@ -87,8 +87,8 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
         <div class="flex justify-end items-center gap-2 md:hidden">
             <a
                 href="tel:+49303723560"
-                aria-label="Festnetz anrufen"
-                class="p-2 text-gray-300 hover:text-custom-gold transition-colors duration-200 relative"
+                aria-label="Anrufen"
+                class="p-2 text-custom-white hover:text-custom-gold transition-colors duration-200 relative"
             >
                 <svg
                     width="24"
@@ -125,7 +125,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
                     ${
                         isActive("")
                             ? "text-custom-gold font-bold after:w-full"
-                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                            : "text-custom-white hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
                     }`}
                     aria-current={isActive("") ? "page" : undefined}
                 >
@@ -140,7 +140,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
                     ${
                         isActive("preisliste")
                             ? "text-custom-gold font-bold after:w-full"
-                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                            : "text-custom-white hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
                     }`}
                     aria-current={isActive("preisliste") ? "page" : undefined}
                 >
@@ -155,7 +155,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
                     ${
                         isActive("kontakt")
                             ? "text-custom-gold font-bold after:w-full"
-                            : "text-gray-300 hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
+                            : "text-custom-white hover:text-custom-light-gold after:w-0 hover:after:w-full after:bg-custom-light-gold"
                     }`}
                     aria-current={isActive("kontakt") ? "page" : undefined}
                 >

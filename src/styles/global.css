@@ -50,10 +50,13 @@
 }
 
 @theme {
-  --color-custom-green: #053321;
+  --color-custom-green: #001b11;
   --color-custom-light-green: #0b5438;
-  --color-custom-gold: #E5C17D;
+  --color-custom-gold: #bb9650;
   --color-custom-light-gold: #F1DEC0;
+
+  --color-custom-white: #dfd6c7;
+  --color-custom-light-white: #D8D9D6;
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
