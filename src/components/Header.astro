@@ -8,16 +8,6 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
     id="main-header"
     class="sticky top-0 left-0 w-full z-50 md:relative bg-custom-green py-3 md:py-10 shadow-md md:shadow-none transition-transform duration-300 section-depth-b"
 >
-    <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
-        <div
-            class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-custom-gold/10 blur-3xl"
-        >
-        </div>
-        <div
-            class="absolute -bottom-40 -right-24 w-80 h-80 rounded-full bg-custom-gold/5 blur-3xl"
-        >
-        </div>
-    </div>
     <div class="max-w-3xl mx-auto px-4 grid grid-cols-3 items-center md:block">
         <!-- Hamburger Menu -->
         <div class="flex justify-start md:hidden">
