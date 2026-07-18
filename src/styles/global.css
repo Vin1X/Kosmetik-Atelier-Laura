@@ -61,3 +61,41 @@
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
 }
+
+@utility gold-glow {
+  box-shadow: 0 0 24px -6px color-mix(in srgb, var(--color-custom-gold) 35%, transparent);
+}
+
+@utility gold-glow-lg {
+  box-shadow: 0 0 40px -8px color-mix(in srgb, var(--color-custom-gold) 45%, transparent);
+}
+
+@utility card-elevated {
+  background: linear-gradient(160deg, #0a2e1f 0%, #001b11 100%);
+  box-shadow:
+    0 20px 40px -20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+@utility section-depth {
+  background: radial-gradient(ellipse at top, #062c1c 0%, #001b11 60%);
+}
+
+@utility section-depth-b {
+  background: radial-gradient(ellipse at bottom, #062c1c 0%, #001b11 60%);
+}
+
+@utility section-depth-alt {
+  background: radial-gradient(ellipse at bottom, #062c1c 0%, #001b11 65%);
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+@utility reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -6,9 +6,21 @@ import localBirdImage from "../assets/image1.jpeg";
 ---
 
 <Layout title="Kosmetik Atelier Laura">
-    <section class="relative overflow-hidden bg-custom-green py-16 px-4">
+    <section
+        class="relative overflow-hidden bg-custom-green py-16 px-4 section-depth"
+    >
+        <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+            <div
+                class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-custom-gold/10 blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute -bottom-40 -right-24 w-80 h-80 rounded-full bg-custom-gold/5 blur-3xl"
+            >
+            </div>
+        </div>
         <div
-            class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center md:text-left md:items-start"
+            class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center md:text-left md:items-start reveal"
         >
             <h1 class="leading-tight mb-4">
                 <span
@@ -93,7 +105,7 @@ import localBirdImage from "../assets/image1.jpeg";
 
     <section class="overflow-hidden py-16 px-4 bg-custom-green">
         <div
-            class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 md:items-stretch"
+            class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 md:items-stretch reveal"
         >
             <div class="flex flex-col justify-between h-full">
                 <div>
@@ -167,10 +179,6 @@ import localBirdImage from "../assets/image1.jpeg";
                     alt="A bird sitting on a nest of eggs."
                     class="w-full rounded-lg flex items-center justify-center text-sm tracking-widest uppercase border border-gray-200"
                 />
-                <div
-                    class="absolute -bottom-4 -right-4 w-24 h-24 border border-custom-gold rounded -z-10"
-                >
-                </div>
             </div>
         </div>
     </section>
@@ -189,8 +197,18 @@ import localBirdImage from "../assets/image1.jpeg";
         <div class="h-px w-10 bg-custom-gold"></div>
     </div>
 
-    <section class="px-4 py-8 md:py-16 bg-custom-green">
-        <div class="max-w-6xl mx-auto">
+    <section class="px-4 py-8 md:py-16 bg-custom-green section-depth-alt">
+        <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+            <div
+                class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-custom-gold/10 blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute -bottom-40 -right-24 w-80 h-80 rounded-full bg-custom-gold/5 blur-3xl"
+            >
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto reveal">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {
                     [
@@ -213,9 +231,9 @@ import localBirdImage from "../assets/image1.jpeg";
                             image: { localBirdImage },
                         },
                     ].map(({ title, sub, icon, image }) => (
-                        <div class="bg-custom-light-green border-2 border-custom-gold rounded-lg flex flex-col items-center text-center hover:border-custom-light-gold transition-colors duration-200 overflow-hidden">
+                        <div class="bg-custom-light-green border-2 border-custom-gold rounded-lg flex flex-col items-center text-center overflow-hidden card-elevated hover:gold-glow-lg hover:-translate-y-1.5 transition-all duration-500">
                             <div class="p-8 pb-6 flex flex-col items-center gap-4 flex-1">
-                                <div class="w-14 h-14 rounded-full border-2 border-custom-gold flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-custom-gold/10 border-2 border-custom-gold flex items-center justify-center">
                                     <svg
                                         viewBox="0 0 24 24"
                                         class="w-5 h-5 stroke-custom-gold fill-none"
@@ -238,17 +256,16 @@ import localBirdImage from "../assets/image1.jpeg";
                                 </div>
                             </div>
 
-                            {/* <div class="w-full aspect-4/3 bg-gray-100 flex items-center justify-center text-custom-light-white text-sm tracking-widest border-t-custom-gold border-t-2">
-                                {image}
-                            </div> */}
-                            <Image
-                                src={localBirdImage}
-                                alt="A bird sitting on a nest of eggs."
-                                class="w-full aspect-4/3 flex items-center justify-centertracking-widest border-t-custom-gold border-t-2"
-                                alt="image for {sub}"
-                                width="400"
-                                height="1000"
-                            />
+                            <div class="relative w-full aspect-4/3">
+                                <Image
+                                    src={localBirdImage}
+                                    alt={`Bild zu ${title}`}
+                                    class="w-full h-full object-cover border-t-2 border-t-custom-gold"
+                                    width="400"
+                                    height="300"
+                                />
+                                <div class="absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-custom-green to-transparent" />
+                            </div>
                         </div>
                     ))
                 }
@@ -271,22 +288,42 @@ import localBirdImage from "../assets/image1.jpeg";
     </div>
 
     <section class="mx-auto px-4 text-center py-8 md:py-16 bg-custom-green">
-        <p
-            class="text-custom-gold text-xl md:text-2xl tracking-[0.2em] uppercase mb-4 font-sans px-2"
-        >
-            Schönheit ist Vertrauenssache.
-        </p>
-        <h2
-            class="font-serif text-gray-200 text-lg md:text-xl mb-8 italic font-light"
-        >
-            Wir freuen uns darauf, Sie kennenzulernen.
-        </h2>
+        <div class="reveal">
+            <p
+                class="text-custom-gold text-xl md:text-2xl tracking-[0.2em] uppercase mb-4 font-sans px-2"
+            >
+                Schönheit ist Vertrauenssache.
+            </p>
+            <h2
+                class="font-serif text-gray-200 text-lg md:text-xl mb-8 italic font-light"
+            >
+                Wir freuen uns darauf, Sie kennenzulernen.
+            </h2>
 
-        <a
-            href="/kontakt"
-            class="inline-block w-full sm:w-auto px-8 py-4 rounded-lg border border-custom-gold text-custom-gold font-sans text-xs md:text-sm tracking-widest uppercase hover:bg-custom-light-gold hover:text-custom-green transition-colors duration-200"
-        >
-            Jetzt kontaktieren und Termin vereinbaren
-        </a>
+            <a
+                href="/kontakt"
+                class="inline-block w-full sm:w-auto px-8 py-4 rounded-lg border border-custom-gold text-custom-gold font-sans text-xs md:text-sm tracking-widest uppercase gold-glow hover:gold-glow-lg hover:bg-custom-gold hover:text-custom-green transition-all duration-300"
+            >
+                Jetzt kontaktieren und Termin vereinbaren
+            </a>
+        </div>
     </section>
 </Layout>
+
+<script>
+    const revealEls = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("reveal-visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -60px 0px" },
+    );
+
+    revealEls.forEach((el) => observer.observe(el));
+</script>
