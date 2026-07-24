@@ -77,6 +77,10 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
+@utility nav-ellipse {
+  background: radial-gradient(ellipse at center, #062c1c 0%, #001b11 90%);
+}
+
 @utility section-depth {
   background: radial-gradient(ellipse at top, #062c1c 0%, #001b11 60%);
 }

@@ -2,11 +2,17 @@
 const { pathname } = Astro.url;
 const current = pathname.replace(/^\/|\/$/g, "");
 const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
+const isHome = pathname === "/" || pathname === "";
 ---
 
 <div
     id="main-header"
-    class="sticky top-0 left-0 w-full z-50 md:relative bg-custom-green py-3 md:py-10 shadow-md md:shadow-none transition-transform duration-300 section-depth-b"
+    class:list={[
+        "w-full z-50 py-4 md:py-8 transition-all duration-300",
+        isHome
+            ? "absolute top-0 left-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent"
+            : "sticky top-0 left-0 md:relative bg-custom-green shadow-md md:shadow-none transition-transform section-depth-b",
+    ]}
 >
     <div class="max-w-3xl mx-auto px-4 grid grid-cols-3 items-center md:block">
         <!-- Hamburger Menu -->
@@ -88,7 +94,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
             <a
                 href="tel:+49303723560"
                 aria-label="Anrufen"
-                class="p-2 text-custom-white hover:text-custom-gold transition-colors duration-200 relative"
+                class="p-2 text-custom-white hover:text-custom-light-gold transition-colors duration-200 relative"
             >
                 <svg
                     width="24"
@@ -112,7 +118,7 @@ const isActive = (path: string) => current === path.replace(/^\/|\/$/g, "");
     <nav
         id="main-nav"
         aria-label="Navigation"
-        class="hidden md:flex justify-center absolute md:static top-[calc(100%+8px)] left-4 right-4 bg-custom-green md:bg-transparent rounded-xl md:rounded-none p-6 md:p-0 shadow-xl md:shadow-none border border-white/5 md:border-none z-50"
+        class="border-custom-white/10 max-md:nav-ellipse hidden md:flex justify-center absolute md:static top-[calc(100%+8px)] left-4 right-4 bg-custom-green md:bg-transparent rounded-xl md:rounded-none p-6 md:p-0 shadow-xl md:shadow-none border md:border-none z-50"
     >
         <ul
             class="flex flex-col md:flex-row items-center gap-6 md:gap-8 tracking-wide w-full md:w-auto"
