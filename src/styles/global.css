@@ -51,12 +51,12 @@
 
 @theme {
   --color-custom-green: #001b11;
-  --color-custom-light-green: #0b5438;
+  --color-custom-light-green: #2d8a73;
   --color-custom-gold: #bb9650;
-  --color-custom-light-gold: #F1DEC0;
+  --color-custom-light-gold: #eec17c;
 
   --color-custom-white: #dfd6c7;
-  --color-custom-light-white: #D8D9D6;
+  --color-custom-light-white: #f2ede4;
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;

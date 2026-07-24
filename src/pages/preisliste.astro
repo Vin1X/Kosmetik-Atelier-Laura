@@ -238,7 +238,7 @@ const categories: Category[] = [
         categories.map((cat) => (
           <details class="group overflow-hidden" open={cat.open}>
             <summary class="flex justify-between items-center px-5 py-2 cursor-pointer list-none select-none transition-colors duration-200 border-b border-gray-200">
-              <h2 class="font-serif text-lg text-custom-white tracking-wide group-hover:text-custom-light-gold">
+              <h2 class="font-serif text-lg text-custom-gold tracking-wide group-hover:text-custom-light-gold">
                 {cat.title}
               </h2>
               <svg
@@ -258,7 +258,7 @@ const categories: Category[] = [
 
             <div class="px-5 pb-4">
               {cat.description && (
-                <p class="text-sm text-custom-light-white mb-3 pt-1">
+                <p class="text-sm text-custom-gold mb-3 pt-1">
                   {cat.description}
                 </p>
               )}
@@ -268,7 +268,7 @@ const categories: Category[] = [
                   <li class="py-3">
                     <div class="flex justify-between items-baseline gap-4">
                       {item.name === "Zusätze" ? (
-                        <span class="text-custom-white font-serif text-sm font-semibold tracking-wide mt-6">
+                        <span class="text-custom-light-gold font-serif text-sm font-semibold tracking-wide mt-6">
                           {item.name}
                         </span>
                       ) : (

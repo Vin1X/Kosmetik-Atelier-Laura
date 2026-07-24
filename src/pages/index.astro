@@ -2,7 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 
 import { Image } from "astro:assets";
-import localBirdImage from "../assets/image1.jpeg";
+import localBirdImage from "../assets/image21.webp";
+
+import afterImage from "../assets/image2.jpeg";
 ---
 
 <Layout title="Kosmetik Atelier Laura">
@@ -22,6 +24,12 @@ import localBirdImage from "../assets/image1.jpeg";
         <div
             class="relative z-10 max-w-4xl mx-auto flex flex-col items-center text-center md:text-left md:items-start reveal"
         >
+            <p
+                class="text-custom-gold text-xs md:text-sm tracking-[0.35em] uppercase mb-6 font-sans"
+            >
+                Kosmetik Atelier Laura · Berlin
+            </p>
+
             <h1 class="leading-tight mb-4">
                 <span
                     class="block text-4xl sm:text-5xl md:text-7xl font-semibold tracking-tight uppercase text-custom-white font-serif"
@@ -168,16 +176,11 @@ import localBirdImage from "../assets/image1.jpeg";
                 </ul>
             </div>
 
-            <div class="relative h-full min-h-100 md:min-h-0">
-                <!-- <div
-                    class="w-full h-full bg-gray-100 rounded-lg flex items-center justify-center text-custom-light-white text-sm tracking-widest uppercase border border-gray-200"
-                >
-                    [ Bild Placeholder ]
-                </div> -->
+            <div class="relative w-full h-full min-h-100 md:min-h-0">
                 <Image
                     src={localBirdImage}
                     alt="A bird sitting on a nest of eggs."
-                    class="w-full rounded-lg flex items-center justify-center text-sm tracking-widest uppercase border border-gray-200"
+                    class="md:absolute md:inset-0 w-full h-full object-cover rounded-lg border-2 border-custom-gold"
                 />
             </div>
         </div>
@@ -197,14 +200,337 @@ import localBirdImage from "../assets/image1.jpeg";
         <div class="h-px w-10 bg-custom-gold"></div>
     </div>
 
-    <section class="px-4 py-8 md:py-16 bg-custom-green section-depth-alt">
+    <section
+        class="relative overflow-hidden py-20 md:pt-16 px-4 bg-custom-green section-depth-b"
+    >
         <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
             <div
-                class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-custom-gold/10 blur-3xl"
+                class="absolute top-1/3 -right-40 w-md h-112 rounded-full bg-custom-gold/8 blur-3xl"
             >
             </div>
             <div
-                class="absolute -bottom-40 -right-24 w-80 h-80 rounded-full bg-custom-gold/5 blur-3xl"
+                class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-custom-light-gold/5 blur-3xl"
+            >
+            </div>
+        </div>
+
+        <div class="relative z-10 max-w-6xl mx-auto reveal">
+            <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+                <p
+                    class="text-custom-gold text-xs md:text-sm tracking-[0.3em] uppercase mb-3 font-sans"
+                >
+                    Ionto Comed Gerätetechnik
+                </p>
+                <h2
+                    class="font-serif text-3xl md:text-5xl text-custom-white mb-4"
+                >
+                    Unsere gefragtesten Behandlungen
+                </h2>
+                <p
+                    class="font-serif text-custom-white/70 text-base md:text-lg italic font-light"
+                >
+                    Sichtbare Hauterneuerung mit professioneller Gerätetechnik –
+                    für Ergebnisse, die man sieht und spürt.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-24 md:gap-32">
+                <!-- 1. MICRONEEDLING -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
+                >
+                    <div class="relative order-1">
+                        <div
+                            class="absolute -inset-3 md:-inset-5 border border-custom-gold rounded-lg -z-10 translate-x-3 translate-y-3 md:translate-x-5 md:translate-y-5"
+                        >
+                        </div>
+
+                        <div
+                            class="before-after-container relative w-full aspect-4/5 rounded-lg border border-custom-gold/20 overflow-hidden select-none"
+                        >
+                            <Image
+                                src={afterImage}
+                                alt="Microneedling Ergebnis Nachher"
+                                class="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <span
+                                class="absolute bottom-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                            >
+                                Nachher
+                            </span>
+
+                            <div
+                                class="before-img-wrapper absolute inset-0 w-full h-full z-10 overflow-hidden"
+                                style="clip-path: inset(0 50% 0 0);"
+                            >
+                                <Image
+                                    src={localBirdImage}
+                                    alt="Microneedling Hautzustand Vorher"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <span
+                                    class="absolute bottom-3 left-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                                >
+                                    Vorher
+                                </span>
+                            </div>
+
+                            <div
+                                class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-custom-gold z-20 pointer-events-none -translate-x-1/2"
+                            >
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-custom-gold text-custom-green flex items-center justify-center shadow-xl"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        class="w-4 h-4 stroke-custom-green fill-none"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M8 7l-5 5 5 5M16 7l5 5-5 5"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                aria-label="Vorher und Nachher Vergleich verstellen"
+                                class="before-after-slider absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="order-2">
+                        <p
+                            class="text-custom-gold text-xs md:text-sm tracking-[0.25em] uppercase mb-3 font-sans"
+                        >
+                            Kollagen-Induktion
+                        </p>
+                        <h3
+                            class="font-serif text-3xl md:text-4xl text-custom-white mb-4"
+                        >
+                            Microneedling
+                        </h3>
+                        <p
+                            class="text-custom-white/80 font-serif text-base md:text-lg leading-relaxed mb-6"
+                        >
+                            Mit dem Microneedling-Gerät von Ionto Comed setzen
+                            wir feinste, kontrollierte Mikroimpulse in der
+                            obersten Hautschicht – der natürliche Auslöser für
+                            die körpereigene Kollagenbildung.
+                        </p>
+                        <ul class="flex flex-col gap-3 mb-8">
+                            {
+                                [
+                                    "Individuelle Nadeltiefe für Ihren Hauttyp",
+                                    "Angeregte Kollagen- und Elastinproduktion",
+                                    "Feinere Poren, glattere Textur, weniger Linien",
+                                    "Intensive Einschleusung hochwirksamer Wirkstoffe",
+                                ].map((point) => (
+                                    <li class="flex items-start gap-3">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            class="w-4 h-4 mt-1 stroke-custom-gold fill-none shrink-0"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M5 13l4 4L19 7"
+                                            />
+                                        </svg>
+                                        <span class="text-custom-white/90 text-sm font-serif leading-relaxed">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <a
+                            href="/kontakt"
+                            class="inline-flex items-center gap-2 text-custom-gold text-xs md:text-sm tracking-widest uppercase font-sans border-b border-custom-gold pb-1 hover:gap-3 transition-all duration-300"
+                        >
+                            Termin für Microneedling anfragen
+                            <svg
+                                viewBox="0 0 24 24"
+                                class="w-4 h-4 stroke-custom-gold fill-none"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13 7l5 5-5 5M6 12h12"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. MIKRODERMABRASION -->
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
+                >
+                    <div class="order-2 md:order-1">
+                        <p
+                            class="text-custom-gold text-xs md:text-sm tracking-[0.25em] uppercase mb-3 font-sans"
+                        >
+                            Sanfte Tiefenreinigung
+                        </p>
+                        <h3
+                            class="font-serif text-3xl md:text-4xl text-custom-white mb-4"
+                        >
+                            Mikrodermabrasion
+                        </h3>
+                        <p
+                            class="text-custom-white/80 font-serif text-base md:text-lg leading-relaxed mb-6"
+                        >
+                            Die Mikrodermabrasion von Ionto Comed trägt
+                            abgestorbene Hautzellen sanft und kristallfrei ab
+                            und regt gleichzeitig die Durchblutung an.
+                        </p>
+                        <ul class="flex flex-col gap-3 mb-8">
+                            {
+                                [
+                                    "Porentiefe Reinigung ganz ohne Reizung",
+                                    "Sofort sichtbarer Frische-Effekt",
+                                    "Ideal als Vorbereitung für weitere Behandlungen",
+                                    "Geeignet für nahezu jeden Hauttyp",
+                                ].map((point) => (
+                                    <li class="flex items-start gap-3">
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            class="w-4 h-4 mt-1 stroke-custom-gold fill-none shrink-0"
+                                            stroke-width="2"
+                                        >
+                                            <path
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                d="M5 13l4 4L19 7"
+                                            />
+                                        </svg>
+                                        <span class="text-custom-white/90 text-sm font-serif leading-relaxed">
+                                            {point}
+                                        </span>
+                                    </li>
+                                ))
+                            }
+                        </ul>
+                        <a
+                            href="/kontakt"
+                            class="inline-flex items-center gap-2 text-custom-gold text-xs md:text-sm tracking-widest uppercase font-sans border-b border-custom-gold pb-1 hover:gap-3 transition-all duration-300"
+                        >
+                            Termin für Mikrodermabrasion anfragen
+                            <svg
+                                viewBox="0 0 24 24"
+                                class="w-4 h-4 stroke-custom-gold fill-none"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M13 7l5 5-5 5M6 12h12"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="relative order-1 md:order-2">
+                        <div
+                            class="absolute -inset-3 md:-inset-5 border border-custom-gold/50 rounded-lg -z-10 -translate-x-3 translate-y-3 md:-translate-x-5 md:translate-y-5"
+                        >
+                        </div>
+
+                        <div
+                            class="before-after-container relative w-full aspect-4/5 rounded-lg border border-custom-gold/20 overflow-hidden select-none"
+                        >
+                            <Image
+                                src={afterImage}
+                                alt="Mikrodermabrasion Ergebnis Nachher"
+                                class="absolute inset-0 w-full h-full object-cover"
+                            />
+                            <span
+                                class="absolute bottom-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                            >
+                                Nachher
+                            </span>
+
+                            <div
+                                class="before-img-wrapper absolute inset-0 w-full h-full z-10 overflow-hidden"
+                                style="clip-path: inset(0 50% 0 0);"
+                            >
+                                <Image
+                                    src={localBirdImage}
+                                    alt="Mikrodermabrasion Zustand Vorher"
+                                    class="absolute inset-0 w-full h-full object-cover"
+                                />
+                                <span
+                                    class="absolute bottom-3 left-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                                >
+                                    Vorher
+                                </span>
+                            </div>
+
+                            <div
+                                class="slider-line absolute top-0 bottom-0 left-1/2 w-0.5 bg-custom-gold z-20 pointer-events-none -translate-x-1/2"
+                            >
+                                <div
+                                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-custom-gold text-custom-green flex items-center justify-center shadow-xl"
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        class="w-4 h-4 stroke-custom-green fill-none"
+                                        stroke-width="2.5"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            d="M8 7l-5 5 5 5M16 7l5 5-5 5"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <input
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="50"
+                                aria-label="Vorher und Nachher Vergleich verstellen"
+                                class="before-after-slider absolute inset-0 w-full h-full opacity-0 z-30 cursor-ew-resize"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center justify-center py-4 bg-custom-green">
+            <div class="h-px w-10 bg-custom-gold"></div>
+            <svg
+                viewBox="0 0 40 12"
+                class="w-10 h-3 fill-custom-gold"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
+                ></path>
+            </svg>
+            <div class="h-px w-10 bg-custom-gold"></div>
+        </div>
+    </section>
+
+    <section class="px-4 py-8 md:py-16 bg-custom-green section-depth-alt">
+        <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+            <div
+                class="absolute top-0 left-1/4 w-72 h-72 rounded-full bg-custom-gold/6 blur-3xl"
+            >
+            </div>
+            <div
+                class="absolute -bottom-24 -right-32 w-96 h-96 rounded-full bg-custom-gold/5 blur-3xl"
             >
             </div>
         </div>
@@ -271,31 +597,53 @@ import localBirdImage from "../assets/image1.jpeg";
                 }
             </div>
         </div>
+
+        <div
+            class="flex items-center gap-3 justify-center py-8 bg-custom-green"
+        >
+            <div
+                class="absolute inset-0 overflow-hidden -z-10 pointer-events-none"
+            >
+                <div
+                    class="absolute top-0 left-1/2 w-48 h-48 rounded-full bg-custom-gold/6 blur-3xl"
+                >
+                </div>
+                <div
+                    class="absolute -bottom-12 -right-24 w-72 h-72 rounded-full bg-custom-gold/5 blur-3xl"
+                >
+                </div>
+            </div>
+            <div class="h-px w-10 bg-custom-gold"></div>
+            <svg
+                viewBox="0 0 40 12"
+                class="w-10 h-3 fill-custom-gold"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <path
+                    d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
+                ></path>
+            </svg>
+            <div class="h-px w-10 bg-custom-gold"></div>
+        </div>
     </section>
 
-    <div class="flex items-center gap-3 justify-center py-4 bg-custom-green">
-        <div class="h-px w-10 bg-custom-gold"></div>
-        <svg
-            viewBox="0 0 40 12"
-            class="w-10 h-3 fill-custom-gold"
-            xmlns="http://www.w3.org/2000/svg"
-        >
-            <path
-                d="M20 0 C14 4, 6 6, 0 6 C6 6, 14 8, 20 12 C26 8, 34 6, 40 6 C34 6, 26 4, 20 0Z"
-            ></path>
-        </svg>
-        <div class="h-px w-10 bg-custom-gold"></div>
-    </div>
-
-    <section class="mx-auto px-4 text-center py-8 md:py-16 bg-custom-green">
-        <div class="reveal">
+    <section
+        class="relative overflow-hidden mx-auto px-4 text-center py-8 md:py-16 bg-custom-green section-depth"
+    >
+        <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] h-64 rounded-full bg-custom-gold/6 blur-3xl"
+            >
+            </div>
+        </div>
+        <div class="reveal relative z-10">
             <p
                 class="text-custom-gold text-xl md:text-2xl tracking-[0.2em] uppercase mb-4 font-sans px-2"
             >
                 Schönheit ist Vertrauenssache.
             </p>
             <h2
-                class="font-serif text-gray-200 text-lg md:text-xl mb-8 italic font-light"
+                class="font-serif text-custom-white text-lg md:text-xl mb-8 italic font-light"
             >
                 Wir freuen uns darauf, Sie kennenzulernen.
             </h2>
@@ -326,4 +674,34 @@ import localBirdImage from "../assets/image1.jpeg";
     );
 
     revealEls.forEach((el) => observer.observe(el));
+
+    function setupBeforeAfterSliders() {
+        const containers = document.querySelectorAll(".before-after-container");
+
+        containers.forEach((container) => {
+            const slider = container.querySelector(
+                ".before-after-slider",
+            ) as HTMLInputElement;
+            const beforeWrapper = container.querySelector(
+                ".before-img-wrapper",
+            ) as HTMLElement;
+            const line = container.querySelector(".slider-line") as HTMLElement;
+
+            if (!slider || !beforeWrapper || !line) return;
+
+            const updateSlider = () => {
+                const value = slider.value;
+                beforeWrapper.style.clipPath = `inset(0 ${100 - Number(value)}% 0 0)`;
+                line.style.left = `${value}%`;
+            };
+
+            slider.addEventListener("input", updateSlider);
+            // Für Touch-Geräte
+            slider.addEventListener("change", updateSlider);
+        });
+    }
+
+    setupBeforeAfterSliders();
+
+    document.addEventListener("astro:page-load", setupBeforeAfterSliders);
 </script>
