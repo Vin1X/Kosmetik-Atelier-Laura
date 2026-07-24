@@ -11,10 +11,14 @@ interface Props {
 const { title = "Kosmetik Atelier Laura", isTextPage = false } = Astro.props;
 ---
 
-<html lang="de">
+<html lang="de" class="bg-custom-green">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#001b11" />
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -36,7 +40,7 @@ const { title = "Kosmetik Atelier Laura", isTextPage = false } = Astro.props;
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="bg-custom-green min-h-screen">
     <Header />
     <article>
       {
