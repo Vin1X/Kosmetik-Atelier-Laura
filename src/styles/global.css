@@ -103,3 +103,8 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
+}

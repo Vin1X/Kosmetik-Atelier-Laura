@@ -6,6 +6,18 @@ import Faq from "../components/Faq.astro";
 import { Image } from "astro:assets";
 import indexPhoto from "../assets/index_photo.webp";
 import localBirdImage from "../assets/image21.webp";
+
+import ionto from "../assets/ionto.webp";
+
+import LeafIcon from "../assets/LeafIcon.svg";
+import CandleIcon from "../assets/CandleIcon.svg";
+import PillarIcon from "../assets/PillarIcon.svg";
+import LotusIcon from "../assets/LotusIcon.svg";
+import CertificateIcon from "../assets/CertificateIcon.svg";
+import StarIcon from "../assets/StarIcon.svg";
+import PersonIcon from "../assets/PersonIcon.svg";
+import HourglassIcon from "../assets/HourglassIcon.svg";
+import FlaskIcon from "../assets/FlaskIcon.svg";
 ---
 
 <Layout title="Kosmetik Atelier Laura">
@@ -68,16 +80,7 @@ import localBirdImage from "../assets/image21.webp";
                         <div
                             class="w-12 h-12 rounded-full border-2 border-custom-gold flex items-center justify-center shrink-0 mt-1"
                         >
-                            <svg
-                                viewBox="0 0 24 24"
-                                class="w-6 h-6 stroke-custom-gold fill-none"
-                                stroke-width="1.5"
-                            >
-                                <path
-                                    d="M12 4C9 4 6 6.5 6 10c0 4 6 10 6 10s6-6 6-10c0-3.5-3-6-6-6z"
-                                ></path>
-                                <circle cx="12" cy="10" r="2"></circle>
-                            </svg>
+                            <HourglassIcon class="w-8 h-8 fill-custom-gold" />
                         </div>
                         <p
                             class="text-custom-white font-serif text-lg md:text-2xl leading-relaxed"
@@ -93,16 +96,7 @@ import localBirdImage from "../assets/image21.webp";
                         <div
                             class="w-12 h-12 rounded-full border-2 border-custom-gold flex items-center justify-center shrink-0"
                         >
-                            <svg
-                                viewBox="0 0 24 24"
-                                class="w-6 h-6 stroke-custom-gold fill-none"
-                                stroke-width="1.5"
-                            >
-                                <path
-                                    d="M12 21C12 21 4 13.5 4 8.5a8 8 0 0116 0c0 5-8 12.5-8 12.5z"
-                                ></path>
-                                <circle cx="12" cy="8.5" r="2.5"></circle>
-                            </svg>
+                            <StarIcon class="w-8 h-8 fill-custom-gold" />
                         </div>
                         <p
                             class="text-custom-white font-serif text-lg md:text-2xl leading-relaxed"
@@ -151,37 +145,36 @@ import localBirdImage from "../assets/image21.webp";
                     {
                         [
                             {
-                                icon: "M12 4C9 4 6 6.5 6 10c0 4 6 10 6 10s6-6 6-10c0-3.5-3-6-6-6z",
+                                icon: (
+                                    <LeafIcon class="w-8 h-8 fill-custom-gold" />
+                                ),
                                 text: "Individualität steht bei uns im Mittelpunkt. Jede Behandlung wird genau auf Ihre Haut und Ihre Bedürfnisse abgestimmt.",
                             },
                             {
-                                icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z",
+                                icon: (
+                                    <CertificateIcon class="w-8 h-8 fill-custom-gold pt-1" />
+                                ),
                                 text: "Als zertifizierte Kosmetikerin mit umfangreicher Weiterbildung – u.a. in Microneedling – betreue ich Sie mit voller Aufmerksamkeit.",
                             },
                             {
-                                icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+                                icon: (
+                                    <PersonIcon class="w-9 h-9 fill-custom-gold pl-1.25" />
+                                ),
                                 text: "Hier geht es nicht um Abarbeiten – hier geht es um Sie. Sie stehen bei uns im Mittelpunkt jeder Behandlung.",
                             },
                             {
-                                icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
+                                icon: (
+                                    <CandleIcon class="w-13 h-13 fill-custom-gold" />
+                                ),
                                 text: "Unser Studio bietet ein Ambiente, das den Alltag leiser werden lässt – ein Ort, an dem auch Sie zur Ruhe kommen.",
                             },
                         ].map(({ icon, text }) => (
-                            <li class="flex items-start gap-4 py-1">
-                                <div class="w-12 h-12 rounded-full border border-custom-gold flex items-center justify-center shrink-0 mt-0.5">
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        class="w-5 h-5 stroke-custom-gold fill-none"
-                                        stroke-width="1.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d={icon}
-                                        />
-                                    </svg>
+                            <li class="flex items-center gap-4 py-1">
+                                <div class="w-12 h-12 rounded-full border border-custom-gold flex items-center justify-center shrink-0">
+                                    {icon}
                                 </div>
-                                <p class="text-custom-white text-sm leading-relaxed font-serif">
+
+                                <p class="flex-1 text-custom-white text-sm leading-relaxed font-serif">
                                     {text}
                                 </p>
                             </li>
@@ -234,36 +227,35 @@ import localBirdImage from "../assets/image21.webp";
                         {
                             title: "Ganzheitliche Pflege",
                             sub: "Für Haut, Körper und Seele.",
-                            icon: "M5 3a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2H5zm0 0",
-                            image: { localBirdImage },
+                            icon: (
+                                <LotusIcon class="w-8 h-8 fill-custom-gold" />
+                            ),
+                            image: localBirdImage,
+                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen im Atelier",
                         },
                         {
                             title: "Hochwertige Produkte",
                             sub: "Wirksame Inhaltsstoffe. Sichtbare Ergebnisse.",
-                            icon: "M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z",
-                            image: { localBirdImage },
+                            icon: (
+                                <FlaskIcon class="w-8 h-8 fill-custom-gold" />
+                            ),
+                            image: ionto,
+                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen sowie zum Kauf im Atelier",
                         },
                         {
                             title: "Exklusives Ambiente",
                             sub: "Luxus, der nicht laut ist – aber spürbar.",
-                            icon: "M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z",
-                            image: { localBirdImage },
+                            icon: (
+                                <PillarIcon class="w-11 h-11 fill-custom-gold" />
+                            ),
+                            image: ionto,
+                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen im Atelier",
                         },
-                    ].map(({ title, sub, icon, image }) => (
-                        <div class="mx-8 border-2 border-custom-gold rounded-lg flex flex-col items-center text-center overflow-hidden card-elevated hover:gold-glow-lg hover:-translate-y-1.5 transition-all duration-500">
-                            <div class="py-5 pb-6 flex flex-col items-center gap-4 flex-1">
+                    ].map(({ title, sub, icon, image, alt }) => (
+                        <div class="mx-8 border-2 border-custom-green/30 rounded-lg flex flex-col items-center text-center overflow-hidden card-elevated hover:gold-glow-lg hover:-translate-y-1.5 transition-all duration-500">
+                            <div class="p-5 flex flex-col items-center gap-4 flex-1 bg-custom-light-green/10">
                                 <div class="w-12 h-12 rounded-full bg-custom-gold/10 border-2 border-custom-gold flex items-center justify-center">
-                                    <svg
-                                        viewBox="0 0 24 24"
-                                        class="w-5 h-5 stroke-custom-gold fill-none"
-                                        stroke-width="1.5"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            d={icon}
-                                        />
-                                    </svg>
+                                    {icon}
                                 </div>
                                 <div>
                                     <p class="font-sans text-xs tracking-[0.2em] uppercase text-custom-gold mb-2">
@@ -273,17 +265,16 @@ import localBirdImage from "../assets/image21.webp";
                                         {sub}
                                     </p>
                                 </div>
-                            </div>
-
-                            <div class="relative w-full aspect-square">
-                                <Image
-                                    src={localBirdImage}
-                                    alt={`Bild zu ${title}`}
-                                    class="w-full h-full object-cover border-t-2 border-t-custom-gold"
-                                    width="300"
-                                    height="300"
-                                />
-                                <div class="absolute inset-x-0 bottom-0 h-12 bg-linear-to-t from-custom-green to-transparent" />
+                                <div class="relative w-full rounded-xl overflow-hidden mt-auto aspect-sqaure">
+                                    <Image
+                                        src={image}
+                                        alt={alt}
+                                        class="w-full h-full object-cover"
+                                        width="400"
+                                        height="400"
+                                    />
+                                    <div class="absolute inset-x-0 bottom-0 h-6 bg-linear-to-t from-custom-green to-transparent" />
+                                </div>
                             </div>
                         </div>
                     ))
@@ -313,7 +304,7 @@ import localBirdImage from "../assets/image21.webp";
     >
         <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] h-64 rounded-full bg-custom-gold/6 blur-3xl"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-xl h-64 rounded-full bg-custom-gold/6 blur-3xl"
             >
             </div>
         </div>
