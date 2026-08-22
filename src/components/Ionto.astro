@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import localBirdImage from "../assets/image21.webp";
 
 import afterImage from "../assets/image2.jpeg";
+import microdermabrasion_after from "../assets/microdermabrasion_after.png";
+import microdermabrasion_before from "../assets/microdermabrasion_before.png";
 ---
 
 <section
@@ -55,7 +57,7 @@ import afterImage from "../assets/image2.jpeg";
                         <Image
                             src={afterImage}
                             alt="Microneedling Ergebnis Nachher"
-                            class="absolute inset-0 w-full h-full object-cover"
+                            class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
                         />
                         <span
                             class="absolute bottom-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
@@ -70,7 +72,7 @@ import afterImage from "../assets/image2.jpeg";
                             <Image
                                 src={localBirdImage}
                                 alt="Microneedling Hautzustand Vorher"
-                                class="absolute inset-0 w-full h-full object-cover"
+                                class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
                             />
                             <span
                                 class="absolute bottom-3 left-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
@@ -300,9 +302,9 @@ import afterImage from "../assets/image2.jpeg";
                         class="before-after-container relative w-full aspect-4/5 rounded-lg border border-custom-gold/20 overflow-hidden select-none"
                     >
                         <Image
-                            src={afterImage}
+                            src={microdermabrasion_after}
                             alt="Mikrodermabrasion Ergebnis Nachher"
-                            class="absolute inset-0 w-full h-full object-cover"
+                            class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
                         />
                         <span
                             class="absolute bottom-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
@@ -315,9 +317,9 @@ import afterImage from "../assets/image2.jpeg";
                             style="clip-path: inset(0 50% 0 0);"
                         >
                             <Image
-                                src={localBirdImage}
+                                src={microdermabrasion_before}
                                 alt="Mikrodermabrasion Zustand Vorher"
-                                class="absolute inset-0 w-full h-full object-cover"
+                                class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
                             />
                             <span
                                 class="absolute bottom-3 left-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
