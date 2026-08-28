@@ -42,19 +42,20 @@ const { title = "Kosmetik Atelier Laura", isTextPage = false } = Astro.props;
   </head>
   <body class="bg-custom-green min-h-screen">
     <Header />
-    <article>
+
+    <main>
       {
         isTextPage ? (
-          <main class="p-5 md:pb-8 bg-custom-green section-depth">
-            <div class="max-w-3xl mx-auto w-full">
+          <div class="p-5 md:pb-8 bg-custom-green section-depth">
+            <article class="max-w-3xl mx-auto w-full prose prose-invert prose-custom-gold prose-lg">
               <slot />
-            </div>
-          </main>
+            </article>
+          </div>
         ) : (
           <slot />
         )
       }
-    </article>
+    </main>
 
     <Footer />
   </body>
