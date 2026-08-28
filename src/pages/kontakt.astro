@@ -92,11 +92,11 @@ import Layout from "../layouts/Layout.astro";
         <!-- Placeholder -->
         <div
           id="maps-placeholder"
-          class="relative w-full h-72 md:h-full min-h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-4 text-center p-6 cursor-pointer group"
+          class="relative w-full h-72 md:h-full min-h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-300 flex flex-col items-center justify-center gap-4 text-center p-6 cursor-pointer group"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-10 h-10 text-custom-white group-hover:text-custom-light-gold transition-colors duration-200"
+            class="w-10 h-10 text-custom-green group-hover:text-custom-gold transition-colors duration-200"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -114,16 +114,16 @@ import Layout from "../layouts/Layout.astro";
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
           <div>
-            <p class="text-sm text-gray-500 mb-1">
+            <p class="text-sm text-gray-700 mb-1 font-medium">
               Die Karte wird von Google Maps bereitgestellt.
             </p>
-            <p class="text-xs text-gray-500 mb-4">
+            <p class="text-xs text-gray-600 mb-4">
               Mit dem Laden akzeptieren Sie die<span class="ml-1"></span>
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="underline hover:text-custom-light-gold transition-colors"
+                class="text-gray-600 font-semibold underline hover:text-custom-light-gold transition-colors inline-block py-1 px-0.5"
                 onclick="event.stopPropagation()"
                 >Datenschutzrichtlinien von Google</a
               >. Dabei werden Daten an Google-Server übertragen.
@@ -131,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <button
             id="maps-load-btn"
-            class="px-5 py-2 text-sm font-serif tracking-wide border border-custom-green text-custom-green hover:bg-custom-green hover:text-white transition-colors duration-200 rounded"
+            class="px-5 py-2.5 text-sm font-serif tracking-wide bg-custom-white text-gray-700 hover:bg-custom-light-gold hover:text-custom-green transition-colors duration-200 rounded font-semibold"
           >
             Karte laden
           </button>
@@ -148,23 +148,23 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <script>
+    const placeholder = document.getElementById("maps-placeholder");
+    const iframe = document.getElementById(
+      "maps-iframe",
+    ) as HTMLIFrameElement | null;
+    const btn = document.getElementById("maps-load-btn");
+
+    function loadMap() {
+      if (!iframe || !placeholder) return;
+      const src = iframe.getAttribute("data-src");
+      if (src) iframe.src = src;
+      placeholder.classList.add("hidden");
+      iframe.classList.remove("hidden");
+    }
+
+    btn?.addEventListener("click", loadMap);
+    placeholder?.addEventListener("click", loadMap);
+  </script>
 </Layout>
-
-<script>
-  const placeholder = document.getElementById("maps-placeholder");
-  const iframe = document.getElementById(
-    "maps-iframe",
-  ) as HTMLIFrameElement | null;
-  const btn = document.getElementById("maps-load-btn");
-
-  function loadMap() {
-    if (!iframe || !placeholder) return;
-    const src = iframe.getAttribute("data-src");
-    if (src) iframe.src = src;
-    placeholder.classList.add("hidden");
-    iframe.classList.remove("hidden");
-  }
-
-  btn?.addEventListener("click", loadMap);
-  placeholder?.addEventListener("click", loadMap);
-</script>

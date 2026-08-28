@@ -5,10 +5,15 @@ import Footer from "../components/Footer.astro";
 
 interface Props {
   title?: string;
+  description?: string;
   isTextPage?: boolean;
 }
 
-const { title = "Kosmetik Atelier Laura", isTextPage = false } = Astro.props;
+const {
+  title = "Kosmetikatelier Laura | High-End Kosmetik in Berlin",
+  description = "Ihr Experten-Kosmetikstudio in Berlin Spandau für apparative Kosmetik. Spezialisiert auf IONTO-COMED GlowSolution, Microneedling & Microdermabrasion.",
+  isTextPage = false,
+} = Astro.props;
 ---
 
 <html lang="de" class="bg-custom-green">
@@ -20,6 +25,7 @@ const { title = "Kosmetik Atelier Laura", isTextPage = false } = Astro.props;
     />
     <meta name="theme-color" content="#001b11" />
     <title>{title}</title>
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
