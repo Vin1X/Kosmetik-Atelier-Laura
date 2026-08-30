@@ -7,7 +7,7 @@ import { Image } from "astro:assets";
 import indexPhoto from "../assets/index_photo.webp";
 import localBirdImage from "../assets/image21.webp";
 
-import ionto from "../assets/ionto.webp";
+import ionto_light from "../assets/ionto_light.webp";
 
 import LeafIcon from "../assets/LeafIcon.svg";
 import CandleIcon from "../assets/CandleIcon.svg";
@@ -19,6 +19,10 @@ import PersonIcon from "../assets/PersonIcon.svg";
 import HourglassIcon from "../assets/HourglassIcon.svg";
 import FlaskIcon from "../assets/FlaskIcon.svg";
 import Eucalyptus from "../assets/Eucalyptus.svg";
+
+import bigwork from "../assets/StudioImages/bigwork.webp";
+
+import work from "../assets/StudioImages/work.webp";
 ---
 
 <Layout title="Kosmetik Atelier Laura">
@@ -60,7 +64,9 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                     </span>
                 </h1>
 
-                <Eucalyptus class="my-2 fill-custom-gold" />
+                <div class="my-2 flex justify-center">
+                    <Eucalyptus class="fill-custom-gold" />
+                </div>
 
                 <ul class="flex flex-col gap-5 text-left w-full">
                     <li
@@ -141,19 +147,19 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                                 icon: (
                                     <CertificateIcon class="w-8 h-8 fill-custom-gold pt-1" />
                                 ),
-                                text: "Als zertifizierte Kosmetikerin mit umfangreicher Weiterbildung – u.a. in Microneedling – betreue ich Sie mit voller Aufmerksamkeit.",
+                                text: "Als zertifizierte Ganzheitskosmetikerin mit jahrelanger Erfahrung und umfangreicher Weiterbildungen betreuen wir Sie mit voller Aufmerksamkeit.",
                             },
                             {
                                 icon: (
                                     <PersonIcon class="w-9 h-9 fill-custom-gold pl-1.25" />
                                 ),
-                                text: "Hier geht es nicht um Abarbeiten – hier geht es um Sie. Sie stehen bei uns im Mittelpunkt jeder Behandlung.",
+                                text: "Hier geht es nicht um Abarbeiten – hier geht es um Sie. \nSie stehen bei uns im Mittelpunkt jeder Behandlung.",
                             },
                             {
                                 icon: (
                                     <CandleIcon class="w-13 h-13 fill-custom-gold" />
                                 ),
-                                text: "Unser Studio bietet ein Ambiente, das den Alltag leiser werden lässt – ein Ort, an dem auch Sie zur Ruhe kommen.",
+                                text: "Unser Studio bietet ein Ambiente, welches den Alltag leiser werden lässt – ein Ort, an dem auch Sie zur Ruhe kommen.",
                             },
                         ].map(({ icon, text }) => (
                             <li class="flex items-center gap-4 py-1">
@@ -161,7 +167,7 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                                     {icon}
                                 </div>
 
-                                <p class="flex-1 text-custom-white text-sm leading-relaxed font-serif">
+                                <p class="flex-1 text-custom-white text-sm leading-relaxed font-serif whitespace-pre-line">
                                     {text}
                                 </p>
                             </li>
@@ -170,16 +176,18 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                 </ul>
             </div>
 
-            <div class="relative w-full h-full min-h-100 md:min-h-0">
+            <div class="relative w-full">
                 <Image
-                    src={localBirdImage}
-                    alt="A bird sitting on a nest of eggs."
-                    class="md:absolute md:inset-0 w-full h-full object-cover rounded-lg border-2 border-custom-gold"
+                    src={work}
+                    alt="Einer unserer Arbeitsplätze in unserem Studio."
+                    class="w-full h-auto rounded-lg border-2 border-custom-gold"
                 />
             </div>
         </div>
 
-        <Eucalyptus class="mt-12 fill-custom-gold justify-self-center" />
+        <div class="mt-12 flex justify-center">
+            <Eucalyptus class="fill-custom-gold" />
+        </div>
     </section>
 
     <Ionto />
@@ -200,6 +208,24 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                 {
                     [
                         {
+                            title: "Exklusives Ambiente",
+                            sub: "Luxus, der nicht laut ist – aber spürbar.",
+                            icon: (
+                                <PillarIcon class="w-11 h-11 fill-custom-gold" />
+                            ),
+                            image: bigwork,
+                            alt: "Unser modernes Kosmetikatelier mit exklusivem Ambiente und moderner Ausstattung.",
+                        },
+                        {
+                            title: "Hochwertige Produkte",
+                            sub: "Wirksame Inhaltsstoffe. Sichtbare Ergebnisse.",
+                            icon: (
+                                <FlaskIcon class="w-8 h-8 fill-custom-gold" />
+                            ),
+                            image: ionto_light,
+                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen sowie zum Kauf im Atelier.",
+                        },
+                        {
                             title: "Ganzheitliche Pflege",
                             sub: "Für Haut, Körper und Seele.",
                             icon: (
@@ -208,28 +234,16 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                             image: localBirdImage,
                             alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen im Atelier",
                         },
-                        {
-                            title: "Hochwertige Produkte",
-                            sub: "Wirksame Inhaltsstoffe. Sichtbare Ergebnisse.",
-                            icon: (
-                                <FlaskIcon class="w-8 h-8 fill-custom-gold" />
-                            ),
-                            image: ionto,
-                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen sowie zum Kauf im Atelier",
-                        },
-                        {
-                            title: "Exklusives Ambiente",
-                            sub: "Luxus, der nicht laut ist – aber spürbar.",
-                            icon: (
-                                <PillarIcon class="w-11 h-11 fill-custom-gold" />
-                            ),
-                            image: ionto,
-                            alt: "IONTO-COMED® Kabinettware und professionelle Pflegeprodukte für Behandlungen im Atelier",
-                        },
                     ].map(({ title, sub, icon, image, alt }) => (
-                        <div class="mx-8 border-2 border-custom-green/30 rounded-lg flex flex-col items-center text-center overflow-hidden card-elevated hover:gold-glow-lg hover:-translate-y-1.5 transition-all duration-500">
+                        <div class="mx-8 border border-custom-gold/20 rounded-lg flex flex-col items-center text-center overflow-hidden card-elevated hover:gold-glow-lg hover:-translate-y-2 transition-all duration-500">
                             <div class="p-5 flex flex-col items-center gap-4 flex-1 bg-custom-light-green/10">
-                                <div class="w-12 h-12 rounded-full bg-custom-gold/10 border-2 border-custom-gold flex items-center justify-center">
+                                <div
+                                    class="w-12 h-12 rounded-full
+                                                bg-custom-gold/10
+                                                border border-custom-gold
+                                                shadow-[0_0_20px_rgba(200,170,90,0.15)]
+                                                flex items-center justify-center"
+                                >
                                     {icon}
                                 </div>
                                 <div>
@@ -240,7 +254,11 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                                         {sub}
                                     </p>
                                 </div>
-                                <div class="relative w-full rounded-xl overflow-hidden mt-auto aspect-sqaure">
+                                <div
+                                    class="relative w-full rounded-lg overflow-hidden mt-auto aspect-square
+                                            border border-custom-gold/20
+                                            shadow-inner"
+                                >
                                     <Image
                                         src={image}
                                         alt={alt}
@@ -248,7 +266,11 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
                                         width="400"
                                         height="400"
                                     />
-                                    <div class="absolute inset-x-0 bottom-0 h-6 bg-linear-to-t from-custom-green to-transparent" />
+                                    <div
+                                        class="absolute inset-0
+                                            bg-linear-to-t from-custom-green/50 via-transparent to-custom-gold/5
+                                            pointer-events-none"
+                                    />
                                 </div>
                             </div>
                         </div>
@@ -257,7 +279,9 @@ import Eucalyptus from "../assets/Eucalyptus.svg";
             </div>
         </div>
 
-        <Eucalyptus class="mt-12 fill-custom-gold justify-self-center" />
+        <div class="mt-12 flex justify-center">
+            <Eucalyptus class="fill-custom-gold" />
+        </div>
     </section>
 
     <Faq />

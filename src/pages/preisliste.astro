@@ -16,7 +16,12 @@ const categories: Category[] = [
     title: "Klassische Kosmetikbehandlung",
     items: [
       {
-        name: "Akne Behandlung",
+        name: "Auszeit nehmen - Gesicht, Hals, Dekolleté",
+        price: "55 €",
+        description: "Intensivmassage & exklusive Maske",
+      },
+      {
+        name: "Akne Behandlung - Gesicht",
         price: "60 €",
         description:
           "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Maske, Abschlusspflege",
@@ -34,11 +39,6 @@ const categories: Category[] = [
           "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Augenbrauenkorrektur & -färben, Wimpern färben, Gesichtsenthaarung, Wirkstoffampulle, Intensivmassage, Maske, Abschlusspflege",
       },
       {
-        name: "Auszeit nehmen - Gesicht, Hals, Dekolleté",
-        price: "55 €",
-        description: "Intensivmassage & exklusive Maske",
-      },
-      {
         name: "Männersache - Gesicht",
         price: "60 €",
         description:
@@ -52,6 +52,7 @@ const categories: Category[] = [
         extras: [{ label: "Einneedeln der Wirkstoffampulle", price: "+ 40 €" }],
       },
       { name: "Sheet Maske", price: "+ 14 €" },
+      { name: "Bio-Cellulose-Maske", price: "+ 20 €" },
     ],
   },
   {
@@ -63,8 +64,7 @@ const categories: Category[] = [
         price: "179 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 149 €",
           },
         ],
@@ -74,8 +74,7 @@ const categories: Category[] = [
         price: "229 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 199 €",
           },
         ],
@@ -85,15 +84,14 @@ const categories: Category[] = [
         price: "279 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 249 €",
           },
         ],
       },
       { name: "Zusätze", price: "" }, // Placeholder
-      { name: "Mit Stahlnadeln", price: "+ 10 €" },
       { name: "Wirkstoffampulle", price: "+ 8 €" },
+      { name: "Mit Stahlnadeln", price: "+ 10 €" },
     ],
   },
 
@@ -106,15 +104,15 @@ const categories: Category[] = [
         price: "115 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 95 €",
           },
         ],
       },
       { name: "Zusätze", price: "" }, // Placeholder
-      { name: "Bio-Cellulose-Maske", price: "+ 20 €" },
       { name: "Wirkstoffampulle", price: "+ 8 €" },
+      { name: "Sheet Maske", price: "+ 14 €" },
+      { name: "Bio-Cellulose-Maske", price: "+ 20 €" },
     ],
   },
   {
@@ -126,8 +124,7 @@ const categories: Category[] = [
         price: "270 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 232 €",
           },
         ],
@@ -137,8 +134,7 @@ const categories: Category[] = [
         price: "316 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 279 €",
           },
         ],
@@ -148,8 +144,7 @@ const categories: Category[] = [
         price: "362 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
+            label: "Als 3er-Kur",
             price: "je 327 €",
           },
         ],
@@ -176,7 +171,7 @@ const categories: Category[] = [
       {
         name: "Maniküre Deluxe",
         price: "43 €",
-        description: "Inkl. Massage und Peeling",
+        description: "Inkl. Massage",
       },
       { name: "Zusätze", price: "" }, // Placeholder
       { name: "Nagellack", price: "+ 7 €" },
