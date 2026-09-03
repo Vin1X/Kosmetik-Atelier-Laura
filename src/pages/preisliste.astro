@@ -16,7 +16,12 @@ const categories: Category[] = [
     title: "Klassische Kosmetikbehandlung",
     items: [
       {
-        name: "Akne Behandlung",
+        name: "Auszeit nehmen - Gesicht, Hals, Dekolleté",
+        price: "55 €",
+        description: "Intensivmassage & exklusive Maske",
+      },
+      {
+        name: "Akne Behandlung - Gesicht",
         price: "60 €",
         description:
           "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Maske, Abschlusspflege",
@@ -34,11 +39,6 @@ const categories: Category[] = [
           "Hautdiagnose, Peeling, Vapozondampf, Ausreinigen, Augenbrauenkorrektur & -färben, Wimpern färben, Gesichtsenthaarung, Wirkstoffampulle, Intensivmassage, Maske, Abschlusspflege",
       },
       {
-        name: "Auszeit nehmen - Gesicht, Hals, Dekolleté",
-        price: "55 €",
-        description: "Intensivmassage & exklusive Maske",
-      },
-      {
         name: "Männersache - Gesicht",
         price: "60 €",
         description:
@@ -51,7 +51,8 @@ const categories: Category[] = [
         price: "+ 8 €",
         extras: [{ label: "Einneedeln der Wirkstoffampulle", price: "+ 40 €" }],
       },
-      { name: "Sheet Maske", price: "+ 6 €" },
+      { name: "Sheet Maske", price: "+ 14 €" },
+      { name: "Bio-Cellulose-Maske", price: "+ 20 €" },
     ],
   },
   {
@@ -63,9 +64,8 @@ const categories: Category[] = [
         price: "179 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "149 €",
+            label: "Als 3er-Kur",
+            price: "je 149 €",
           },
         ],
       },
@@ -74,9 +74,8 @@ const categories: Category[] = [
         price: "229 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "199 €",
+            label: "Als 3er-Kur",
+            price: "je 199 €",
           },
         ],
       },
@@ -85,15 +84,14 @@ const categories: Category[] = [
         price: "279 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "249 €",
+            label: "Als 3er-Kur",
+            price: "je 249 €",
           },
         ],
       },
       { name: "Zusätze", price: "" }, // Placeholder
-      { name: "Mit Stahlnadeln", price: "+ 10 €" },
       { name: "Wirkstoffampulle", price: "+ 8 €" },
+      { name: "Mit Stahlnadeln", price: "+ 10 €" },
     ],
   },
 
@@ -104,18 +102,17 @@ const categories: Category[] = [
       {
         name: "Gesicht",
         price: "115 €",
-        extras: [
-          { label: "Mit Wirkstoffampulle", price: "+ 8 €" },
-          { label: "Mit Bio-Cellulose-Maske", price: "+ 15 €" },
-        ],
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "95 €",
+            label: "Als 3er-Kur",
+            price: "je 95 €",
           },
         ],
       },
+      { name: "Zusätze", price: "" }, // Placeholder
+      { name: "Wirkstoffampulle", price: "+ 8 €" },
+      { name: "Sheet Maske", price: "+ 14 €" },
+      { name: "Bio-Cellulose-Maske", price: "+ 20 €" },
     ],
   },
   {
@@ -127,9 +124,8 @@ const categories: Category[] = [
         price: "270 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "232 €",
+            label: "Als 3er-Kur",
+            price: "je 232 €",
           },
         ],
       },
@@ -138,9 +134,8 @@ const categories: Category[] = [
         price: "316 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "279 €",
+            label: "Als 3er-Kur",
+            price: "je 279 €",
           },
         ],
       },
@@ -149,9 +144,8 @@ const categories: Category[] = [
         price: "362 €",
         packages: [
           {
-            label:
-              "Einmalig in Verbindung mit einer anderen Behandlung oder als 3er-Kur",
-            price: "327 €",
+            label: "Als 3er-Kur",
+            price: "je 327 €",
           },
         ],
       },
@@ -177,16 +171,17 @@ const categories: Category[] = [
       {
         name: "Maniküre Deluxe",
         price: "43 €",
-        description: "Mit Massage und Peeling",
+        description: "Inkl. Massage",
       },
-      { name: "Nagellack", price: "7 €" },
+      { name: "Zusätze", price: "" }, // Placeholder
+      { name: "Nagellack", price: "+ 7 €" },
       {
         name: "UV-Lack",
-        price: "19 €",
+        price: "+ 19 €",
         extras: [{ label: "Extras", price: "ab 1 € Aufpreis" }],
       },
-      { name: "Entfernen von UV-Lack", price: "7 €" },
-      { name: "Paraffinbad", price: "14 €" },
+      { name: "Entfernen von UV-Lack", price: "+ 7 €" },
+      { name: "Paraffinbad", price: "+ 14 €" },
     ],
   },
   {
@@ -199,13 +194,14 @@ const categories: Category[] = [
       },
       { name: "Fußpflege Deluxe", price: "60 €", description: "Inkl. Massage" },
       { name: "Fußreflexzonenmassage", price: "35,50 €" },
-      { name: "Nagellack", price: "7 €" },
+      { name: "Zusätze", price: "" }, // Placeholder
+      { name: "Nagellack", price: "+ 7 €" },
       {
         name: "UV-Lack",
-        price: "19 €",
+        price: "+ 19 €",
         extras: [{ label: "Extras", price: "ab 1 € Aufpreis" }],
       },
-      { name: "Entfernen von UV-Lack", price: "7 €" },
+      { name: "Entfernen von UV-Lack", price: "+ 7 €" },
     ],
   },
 
@@ -225,22 +221,27 @@ const categories: Category[] = [
 ];
 ---
 
-<Layout title="Preisliste – Kosmetik Atelier Laura">
-  <main class="max-w-3xl mx-auto px-6 pt-8 pb-16">
-    <p class="text-center text-sm text-gray-400 font-serif mb-12 tracking-wide">
+<Layout title="Preisliste" isTextPage={true}>
+  <section class="relative overflow-hidden mb-4 max-w-3xl mx-auto">
+    <p
+      class="text-center text-xs text-custom-light-white/70 font-sans mb-6 md:mb-10 tracking-widest uppercase"
+    >
       Alle Preise inkl. MwSt. · Änderungen vorbehalten
     </p>
 
-    <div class="flex flex-col gap-3">
+    <div class="flex flex-col gap-4">
       {
         categories.map((cat) => (
-          <details class="group overflow-hidden" open={cat.open}>
-            <summary class="flex justify-between items-center px-5 py-4 cursor-pointer list-none select-none hover:bg-gray-50 transition-colors duration-200 border-b border-gray-200 rounded-lg">
-              <h2 class="font-serif text-lg text-custom-green tracking-wide">
+          <details
+            class="group overflow-hidden rounded-xl bg-custom-green/30 border border-white/5"
+            open={cat.open}
+          >
+            <summary class="flex justify-between items-center px-6 py-4 cursor-pointer list-none select-none transition-colors duration-200 hover:bg-white/5">
+              <h2 class="font-serif text-xl text-custom-gold tracking-wide font-normal">
                 {cat.title}
               </h2>
               <svg
-                class="w-4 h-4 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                class="w-4 h-4 text-custom-gold/70 transition-transform duration-300 group-open:rotate-180"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -254,57 +255,71 @@ const categories: Category[] = [
               </svg>
             </summary>
 
-            <div class="px-5 pb-4">
+            <div class="px-6 pb-5 pt-1">
               {cat.description && (
-                <p class="text-sm text-gray-400 mb-3 pt-1">{cat.description}</p>
+                <p class="text-xs font-sans text-custom-light-gold italic mb-4 pb-2 border-b border-white/10">
+                  {cat.description}
+                </p>
               )}
 
-              <ul class="flex flex-col divide-y divide-gray-100">
+              <ul class="flex flex-col divide-y divide-white/10">
                 {cat.items.map((item) => (
-                  <li class="py-3">
-                    <div class="flex justify-between items-baseline gap-4">
-                      {item.name === "Zusätze" ? (
-                        <span class="text-gray-600 font-serif text-sm font-semibold tracking-wide">
+                  <li class="py-3.5 first:pt-1 last:pb-1">
+                    {item.price === "" ? (
+                      <div class="pt-3 pb-1">
+                        <span class="text-custom-light-gold font-sans text-xs font-semibold uppercase tracking-wider block">
                           {item.name}
                         </span>
-                      ) : (
-                        <span class="text-gray-700 font-serif text-sm">
-                          {item.name}
-                        </span>
-                      )}
-                      <span class="text-custom-green font-semibold text-sm whitespace-nowrap">
-                        {item.price}
-                      </span>
-                    </div>
+                      </div>
+                    ) : (
+                      <>
+                        <div class="flex justify-between items-baseline gap-4">
+                          <span class="text-custom-white font-sans text-sm font-medium tracking-wide">
+                            {item.name}
+                          </span>
+                          <span class="text-custom-gold font-sans font-semibold text-sm tracking-tight tabular-nums whitespace-nowrap">
+                            {item.price}
+                          </span>
+                        </div>
 
-                    {item.description && (
-                      <p class="text-xs text-gray-400 mt-0.5 leading-relaxed">
-                        {item.description}
-                      </p>
-                    )}
+                        {item.description && (
+                          <p class="text-xs font-sans text-custom-light-white/75 mt-1 leading-relaxed max-w-[90%]">
+                            {item.description}
+                          </p>
+                        )}
 
-                    {item.extras && item.extras.length > 0 && (
-                      <ul class="mt-1.5 flex flex-col gap-0.5">
-                        {item.extras.map((e) => (
-                          <li class="flex justify-between text-xs text-gray-500 italic">
-                            <span>{e.label}</span>
-                            <span class="whitespace-nowrap">{e.price}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                        {item.extras && item.extras.length > 0 && (
+                          <ul class="mt-2.5 ml-1 border-l-2 border-custom-gold/30 pl-3 flex flex-col gap-1.5">
+                            {item.extras.map((e) => (
+                              <li class="flex justify-between items-baseline text-xs font-sans">
+                                <span class="text-custom-light-white/80 italic">
+                                  {e.label}
+                                </span>
+                                <span class="text-custom-gold/90 font-medium tabular-nums whitespace-nowrap ml-2">
+                                  {e.price}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
 
-                    {item.packages && item.packages.length > 0 && (
-                      <ul class="mt-2 flex flex-col gap-0.5 bg-gray-50 rounded px-3 py-2">
-                        {item.packages.map((p) => (
-                          <li class="flex justify-between text-xs text-gray-500">
-                            <span>{p.label}</span>
-                            <span class="text-custom-green whitespace-nowrap font-medium">
-                              {p.price}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
+                        {item.packages && item.packages.length > 0 && (
+                          <div class="mt-3 bg-custom-gold/10 border border-custom-gold/20 rounded-lg p-3">
+                            <ul class="flex flex-col gap-1">
+                              {item.packages.map((p) => (
+                                <li class="flex justify-between items-center text-xs font-sans">
+                                  <span class="text-custom-white/90 font-medium">
+                                    {p.label}
+                                  </span>
+                                  <span class="text-custom-gold font-semibold tabular-nums whitespace-nowrap bg-custom-green/60 px-2 py-0.5 rounded border border-custom-gold/30">
+                                    {p.price}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </>
                     )}
                   </li>
                 ))}
@@ -314,5 +329,5 @@ const categories: Category[] = [
         ))
       }
     </div>
-  </main>
+  </section>
 </Layout>

@@ -2,46 +2,44 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Impressum – Kosmetik Atelier Laura">
-  <main class="max-w-3xl mx-auto px-6 pt-8 pb-16">
-    <div class="flex flex-col gap-10">
-      <section>
-        <h2
-          class="font-serif text-xl text-custom-green tracking-wide mb-4 pb-2 border-b border-gray-200"
-        >
-          Angaben gemäß § 5 DDG /
-          <br />
-          Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
-        </h2>
-        <address
-          class="not-italic text-sm text-gray-600 leading-relaxed flex flex-col gap-1"
-        >
-          <span>Katarzyna Walura</span>
-          <span>Kosmetik Atelier Laura</span>
-          <span>Falkenseer Chaussee 262</span>
-          <span>13583 Berlin</span>
-        </address>
-        <ul class="mt-4 text-sm text-gray-600 flex flex-col gap-1">
-          <li>
-            Telefon:
-            <a
-              href="tel:+49303723560"
-              class="hover:text-custom-light-green transition-colors duration-200"
-            >
-              030 / 372 35 60
-            </a>
-          </li>
-          <li>
-            E-Mail:
-            <a
-              href="mailto:Katarzyna.Walura@KosmetikAtelierLaura.de"
-              class="hover:text-custom-light-green transition-colors duration-200"
-            >
-              Katarzyna.Walura@KosmetikAtelierLaura.de
-            </a>
-          </li>
-        </ul>
-      </section>
-    </div>
-  </main>
+<Layout title="Impressum" isTextPage={true}>
+  <div class="flex flex-col gap-10">
+    <section>
+      <h2
+        class="font-serif text-xl text-custom-gold tracking-wide mb-4 pb-2 border-b border-gray-200"
+      >
+        Angaben gemäß § 5 DDG /
+        <br />
+        Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+      </h2>
+      <address
+        class="not-italic text-sm text-custom-white leading-relaxed flex flex-col gap-1"
+      >
+        <span>Katarzyna Walura</span>
+        <span>Kosmetik Atelier Laura</span>
+        <span>Falkenseer Chaussee 262</span>
+        <span>13583 Berlin</span>
+      </address>
+      <ul class="mt-4 text-sm text-custom-white flex flex-col gap-1">
+        <li>
+          Telefon:<span class="ml-1"></span>
+          <a
+            href="tel:+49303723560"
+            class="hover:text-custom-light-gold transition-colors duration-200"
+          >
+            030 / 372 35 60
+          </a>
+        </li>
+        <li>
+          E-Mail:<span class="ml-1"></span>
+          <a
+            href="mailto:Katarzyna.Walura@KosmetikAtelierLaura.de"
+            class="hover:text-custom-light-gold transition-colors duration-200"
+          >
+            Katarzyna.Walura@KosmetikAtelierLaura.de
+          </a>
+        </li>
+      </ul>
+    </section>
+  </div>
 </Layout>

@@ -2,23 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Kontakt & Anfahrt">
-  <main class="max-w-4xl mx-auto px-6 pt-8 pb-16">
-    <!-- <h1
-      class="font-serif text-3xl text-custom-green text-center mb-12 tracking-wide"
-    >
-      Kontakt & Anfahrt
-    </h1> -->
-
+<Layout title="Kontakt & Anfahrt" isTextPage={true}>
+  <section class="relative overflow-hidden">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
       <!-- Left col -->
       <div class="flex flex-col gap-8">
         <!-- Address -->
         <div>
-          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+          <h2 class="font-serif text-lg text-custom-gold mb-2 tracking-wide">
             Adresse
           </h2>
-          <address class="not-italic text-gray-600 text-sm leading-relaxed">
+          <address
+            class="not-italic text-custom-light-white text-sm leading-relaxed"
+          >
             Kosmetik Atelier Laura<br />
             Falkenseer Chaussee 262<br />
             13583 Berlin Spandau
@@ -27,14 +23,16 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Availability -->
         <div>
-          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+          <h2 class="font-serif text-lg text-custom-gold mb-2 tracking-wide">
             Erreichbarkeit
           </h2>
-          <ul class="text-sm text-gray-600 leading-relaxed flex flex-col gap-1">
+          <ul
+            class="text-sm text-custom-light-white leading-relaxed flex flex-col gap-1"
+          >
             <li>
               <a
                 href="https://wa.me/message/VNC2WZRCMIXSA1"
-                class="hover:text-custom-light-green transition-colors duration-200"
+                class="hover:text-custom-light-gold transition-colors duration-200"
               >
                 💬 WhatsApp
               </a>
@@ -42,7 +40,7 @@ import Layout from "../layouts/Layout.astro";
             <li>
               <a
                 href="tel:+49303723560"
-                class="hover:text-custom-light-green transition-colors duration-200"
+                class="hover:text-custom-light-gold transition-colors duration-200"
               >
                 📞 030/372 35 60
               </a>
@@ -50,7 +48,7 @@ import Layout from "../layouts/Layout.astro";
             <!-- <li> #TODO move to impressum
               <a
                 href="mailto:Katarzyna.Walura@kosmetikatelierlaura.de"
-                class="hover:text-custom-light-green transition-colors duration-200"
+                class="hover:text-custom-light-gold transition-colors duration-200"
               >
                 ✉️ Katarzyna.Walura@KosmetikAtelierLaura.de
               </a>
@@ -60,10 +58,12 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Opening Hours -->
         <div>
-          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+          <h2 class="font-serif text-lg text-custom-gold mb-2 tracking-wide">
             Öffnungszeiten
           </h2>
-          <ul class="text-sm text-gray-600 leading-relaxed flex flex-col gap-1">
+          <ul
+            class="text-sm text-custom-light-white leading-relaxed flex flex-col gap-1"
+          >
             <li class="flex gap-6">
               <span class="w-16">Mo – Fr</span><span>09:00 – 17:00</span>
             </li>
@@ -75,10 +75,10 @@ import Layout from "../layouts/Layout.astro";
 
         <!-- Appointments -->
         <div>
-          <h2 class="font-serif text-lg text-custom-green mb-2 tracking-wide">
+          <h2 class="font-serif text-lg text-custom-gold mb-2 tracking-wide">
             Terminvereinbarung
           </h2>
-          <p class="text-sm text-gray-600 leading-relaxed">
+          <p class="text-sm text-custom-light-white leading-relaxed">
             Termine bitte nur telefonisch, vor Ort oder per WhatsApp
             vereinbaren.
           </p>
@@ -87,18 +87,16 @@ import Layout from "../layouts/Layout.astro";
 
       <!-- Right col -->
       <div class="flex flex-col gap-3">
-        <h2 class="font-serif text-lg text-custom-green tracking-wide">
-          Karte
-        </h2>
+        <h2 class="font-serif text-lg text-custom-gold tracking-wide">Karte</h2>
 
         <!-- Placeholder -->
         <div
           id="maps-placeholder"
-          class="relative w-full h-72 md:h-full min-h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-200 flex flex-col items-center justify-center gap-4 text-center p-6 cursor-pointer group"
+          class="relative w-full h-72 md:h-full min-h-64 rounded-lg overflow-hidden bg-gray-100 border border-gray-300 flex flex-col items-center justify-center gap-4 text-center p-6 cursor-pointer group"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-10 h-10 text-gray-300 group-hover:text-custom-light-green transition-colors duration-200"
+            class="w-10 h-10 text-custom-green group-hover:text-custom-gold transition-colors duration-200"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -116,16 +114,16 @@ import Layout from "../layouts/Layout.astro";
               d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
           </svg>
           <div>
-            <p class="text-sm text-gray-500 mb-1">
+            <p class="text-sm text-gray-700 mb-1 font-medium">
               Die Karte wird von Google Maps bereitgestellt.
             </p>
-            <p class="text-xs text-gray-500 mb-4">
-              Mit dem Laden akzeptieren Sie die
+            <p class="text-xs text-gray-600 mb-4">
+              Mit dem Laden akzeptieren Sie die<span class="ml-1"></span>
               <a
                 href="https://policies.google.com/privacy"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="underline hover:text-custom-light-green transition-colors"
+                class="text-gray-600 font-semibold underline hover:text-custom-light-gold transition-colors inline-block py-1 px-0.5"
                 onclick="event.stopPropagation()"
                 >Datenschutzrichtlinien von Google</a
               >. Dabei werden Daten an Google-Server übertragen.
@@ -133,7 +131,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <button
             id="maps-load-btn"
-            class="px-5 py-2 text-sm font-serif tracking-wide border border-custom-green text-custom-green hover:bg-custom-green hover:text-white transition-colors duration-200 rounded"
+            class="px-5 py-2.5 text-sm font-serif tracking-wide bg-custom-white text-gray-700 hover:bg-custom-light-gold hover:text-custom-green transition-colors duration-200 rounded font-semibold"
           >
             Karte laden
           </button>
@@ -149,24 +147,24 @@ import Layout from "../layouts/Layout.astro";
           referrerpolicy="strict-origin-when-cross-origin"></iframe>
       </div>
     </div>
-  </main>
+  </section>
+
+  <script>
+    const placeholder = document.getElementById("maps-placeholder");
+    const iframe = document.getElementById(
+      "maps-iframe",
+    ) as HTMLIFrameElement | null;
+    const btn = document.getElementById("maps-load-btn");
+
+    function loadMap() {
+      if (!iframe || !placeholder) return;
+      const src = iframe.getAttribute("data-src");
+      if (src) iframe.src = src;
+      placeholder.classList.add("hidden");
+      iframe.classList.remove("hidden");
+    }
+
+    btn?.addEventListener("click", loadMap);
+    placeholder?.addEventListener("click", loadMap);
+  </script>
 </Layout>
-
-<script>
-  const placeholder = document.getElementById("maps-placeholder");
-  const iframe = document.getElementById(
-    "maps-iframe",
-  ) as HTMLIFrameElement | null;
-  const btn = document.getElementById("maps-load-btn");
-
-  function loadMap() {
-    if (!iframe || !placeholder) return;
-    const src = iframe.getAttribute("data-src");
-    if (src) iframe.src = src;
-    placeholder.classList.add("hidden");
-    iframe.classList.remove("hidden");
-  }
-
-  btn?.addEventListener("click", loadMap);
-  placeholder?.addEventListener("click", loadMap);
-</script>

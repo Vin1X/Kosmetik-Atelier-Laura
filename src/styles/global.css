@@ -1,14 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
-
 @import "tailwindcss";
 
+/* inter-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/inter-v20-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/inter-v20-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* inter-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/inter-v20-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/playfair-display-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/playfair-display-v40-latin-italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* playfair-display-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/playfair-display-v40-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 
 @theme {
-  --color-custom-green: #004A2E;
-  --color-custom-light-green: #00633E;
-  --color-custom-gold: #C5A059;
-  --color-custom-bg: #FDFBF7;
+  --color-custom-green: #001b11;
+  --color-custom-light-green: #2d8a73;
+  --color-custom-gold: #bb9650;
+  --color-custom-light-gold: #eec17c;
+
+  --color-custom-white: #dfd6c7;
+  --color-custom-light-white: #f2ede4;
 
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
+}
+
+@utility gold-glow {
+  box-shadow: 0 0 24px -6px color-mix(in srgb, var(--color-custom-gold) 35%, transparent);
+}
+
+@utility gold-glow-lg {
+  box-shadow: 0 0 40px -8px color-mix(in srgb, var(--color-custom-gold) 45%, transparent);
+}
+
+@utility card-elevated {
+  background: linear-gradient(160deg, #0a2e1f 0%, #001b11 100%);
+  box-shadow:
+    0 20px 40px -20px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+@utility nav-ellipse {
+  background: radial-gradient(ellipse at center, #062c1c 0%, #001b11 90%);
+}
+
+@utility section-depth {
+  background: radial-gradient(ellipse at top, #062c1c 0%, #001b11 60%);
+}
+
+@utility section-depth-b {
+  background: radial-gradient(ellipse at bottom, #062c1c 0%, #001b11 60%);
+}
+
+@utility section-depth-alt {
+  background: radial-gradient(ellipse at bottom, #062c1c 0%, #001b11 65%);
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+@utility reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+html {
+  scrollbar-gutter: stable;
+  overflow-y: scroll;
 }

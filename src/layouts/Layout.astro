@@ -3,21 +3,66 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
-const { title = "Kosmetik Atelier Laura" } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  isTextPage?: boolean;
+}
+
+const {
+  title = "Kosmetikatelier Laura | High-End Kosmetik in Berlin",
+  description = "Ihr Experten-Kosmetikstudio in Berlin Spandau für apparative Kosmetik. Spezialisiert auf IONTO-COMED GlowSolution, Microneedling & Microdermabrasion.",
+  isTextPage = false,
+} = Astro.props;
 ---
 
-<html lang="de">
+<html lang="de" class="bg-custom-green">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#001b11" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="preload"
+      href="/fonts/inter-v20-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/fonts/playfair-display-v40-latin-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
   </head>
-  <Header />
-  <body class="bg-custom-bg">
-    <article>
-      <slot />
-    </article>
+  <body class="bg-custom-green min-h-screen">
+    <Header />
+
+    <main>
+      {
+        isTextPage ? (
+          <div class="p-5 md:pb-8 bg-custom-green section-depth">
+            <article class="max-w-3xl mx-auto w-full prose prose-invert prose-custom-gold prose-lg">
+              <slot />
+            </article>
+          </div>
+        ) : (
+          <slot />
+        )
+      }
+    </main>
+
     <Footer />
   </body>
-
 </html>

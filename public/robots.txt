@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kosmetikatelierlaura.de/sitemap-index.xml
