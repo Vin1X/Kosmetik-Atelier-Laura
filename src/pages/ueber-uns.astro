@@ -1,0 +1,559 @@
+---
+import { Image } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Eucalyptus from "../assets/Eucalyptus.svg";
+
+import Katarzyna from "../assets/Katarzyna.jpeg";
+import Laura from "../assets/Laura.jpeg";
+
+import Studio1 from "../assets/StudioImages/bigwork2.webp";
+import Studio2 from "../assets/StudioImages/entrance.webp";
+import Studio3 from "../assets/StudioImages/entrance2.webp";
+import Studio4 from "../assets/StudioImages/entrance3.webp";
+import Studio5 from "../assets/StudioImages/entrance4.webp";
+import Studio6 from "../assets/StudioImages/outside.webp";
+import Studio7 from "../assets/StudioImages/smallwork.webp";
+import Studio8 from "../assets/StudioImages/work2.webp";
+import Studio9 from "../assets/StudioImages/work3.webp";
+import Studio10 from "../assets/StudioImages/work4.webp";
+
+const galleryImages = [
+    { src: Studio1, alt: "Kosmetik Atelier Laura - Behandlungsraum" },
+    { src: Studio2, alt: "Kosmetik Atelier Laura - Behandlungsraum" },
+    {
+        src: Studio3,
+        alt: "Kosmetik Atelier Laura - Empfangsbereich",
+    },
+    { src: Studio2, alt: "Kosmetik Atelier Laura - Empfangsbereich" },
+    { src: Studio3, alt: "Kosmetik Atelier Laura - Empfangsbereich" },
+    { src: Studio4, alt: "Kosmetik Atelier Laura - Empfangsbereich" },
+    { src: Studio5, alt: "Kosmetik Atelier Laura - Empfangsbereich" },
+    { src: Studio6, alt: "Kosmetik Atelier Laura - Außenansicht" },
+    { src: Studio7, alt: "Kosmetik Atelier Laura - Behandlungsraum" },
+    { src: Studio8, alt: "Kosmetik Atelier Laura - Fußpflegeraum" },
+    { src: Studio9, alt: "Kosmetik Atelier Laura - Fußpflegeraum" },
+    { src: Studio10, alt: "Kosmetik Atelier Laura - Fußpflegeraum" },
+];
+---
+
+<Layout
+    title="Über uns | Kosmetikatelier Laura in Berlin Spandau"
+    description="Lernen Sie das Team hinter dem Kosmetikatelier Laura kennen: Katarzyna & Laura. Mutter & Tochter vereint durch Leidenschaft für apparative Kosmetik & Hautgesundheit."
+    isTextPage={true}
+>
+    <section class="py-12 px-4 md:py-20 text-custom-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h1
+                    class="text-3xl md:text-5xl font-serif uppercase tracking-tight mb-4"
+                >
+                    Über uns
+                </h1>
+                <p
+                    class="text-custom-gold italic font-serif text-lg md:text-xl"
+                >
+                    Herzlich willkommen im Kosmetik Atelier Laura
+                </p>
+
+                <div class="my-2 flex justify-center">
+                    <Eucalyptus class="fill-custom-gold" />
+                </div>
+
+                <p
+                    class="text-lg md:text-xl font-light opacity-90 max-w-2xl mx-auto"
+                >
+                    Schön, dass du zu uns gefunden hast!
+                </p>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-20"
+            >
+                <!-- Bild Katarzyna -->
+                <div class="md:col-span-5 order-1 md:order-1">
+                    <div
+                        class="relative p-2 border border-custom-gold/30 rounded-sm bg-custom-gold/5"
+                    >
+                        <Image
+                            src={Katarzyna}
+                            alt="Katarzyna Walura - Gründerin Kosmetikatelier Laura."
+                            class="w-full h-auto rounded-sm object-cover shadow-lg"
+                        />
+                        <div class="mt-3 text-center">
+                            <span
+                                class="block font-serif text-lg text-custom-gold"
+                                >Katarzyna</span
+                            >
+                            <span
+                                class="block text-xs uppercase tracking-widest opacity-75"
+                                >Inhaberin & Ganzheitskosmetikerin</span
+                            >
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="md:col-span-7 order-2 md:order-2 space-y-4 leading-relaxed opacity-90 text-sm md:text-base"
+                >
+                    <h2 class="text-2xl font-serif text-custom-gold mb-2">
+                        Mein Weg & Meine Vision
+                    </h2>
+                    <p>
+                        Mein Weg in der Kosmetik begann bereits 1997. Um mein
+                        Wissen auf ein tiefes, ganzheitliches Fundament zu
+                        stellen, absolvierte ich 2009 in Berlin eine fundierte
+                        Ausbildung zur Ganzheitskosmetikerin und
+                        Fachfußpflegerin nach medizinischen Richtlinien.
+                    </p>
+                    <p>
+                        2010 übernahm ich dieses Kosmetikstudio, das bereits
+                        seit den 1980er Jahren besteht. Seitdem habe ich ihm
+                        Schritt für Schritt meine ganz persönliche Note
+                        verliehen, Räume und Behandlungen verändert und einen
+                        Ort geschaffen, an dem man sich einfach geborgen fühlt.
+                        Ich gehe schon immer gerne meinen eigenen Weg – ich
+                        möchte keine Kopie sein, sondern allem, was ich tue,
+                        meine eigene Seele einhauchen.
+                    </p>
+                    <p>
+                        In all den Jahren durfte ich viel lernen – von
+                        entspannenden Massagetechniken über Visagistik und
+                        Wimpernverlängerung bis hin zu Microblading. Mit der
+                        Zeit habe ich gespürt, wo mein Herz am stärksten
+                        schlägt: Heute konzentriere ich mich voller Leidenschaft
+                        auf <strong class="text-custom-gold font-normal"
+                            >apparative Kosmetik</strong
+                        >, klassische Gesichtsbehandlungen und medizinische
+                        Fußpflege.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="border border-custom-gold/30 bg-custom-white/5 p-6 md:p-8 rounded-sm mb-20"
+            >
+                <h3
+                    class="text-xl font-serif text-custom-gold mb-4 text-center md:text-left"
+                >
+                    Naturverbundenheit & Herzensanliegen
+                </h3>
+                <div
+                    class="space-y-4 text-sm md:text-base leading-relaxed opacity-90"
+                >
+                    <p>
+                        Ich liebe die Natur aus tiefster Seele. Barfuß durch den
+                        Wald laufen, den Duft von Räucherritualen spüren, die
+                        Berge und die Kraft von Natursteinen – das ist meine
+                        Welt. Als feinfühliger Löwe gehe ich intuitiv,
+                        warmherzig und mit einer Prise Spiritualität an meine
+                        Arbeit heran.
+                    </p>
+                    <p>
+                        Da meine eigene Haut früher immer wieder empfindlich und
+                        allergisch auf Kosmetikprodukte reagiert hat, achte ich
+                        besonders sorgfältig darauf, womit wir arbeiten. In
+                        unserem Atelier kommen nur Produkte und Inhaltsstoffe
+                        zum Einsatz, die deine Haut sanft pflegen und schützen.
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center mb-20"
+            >
+                <div
+                    class="md:col-span-7 order-2 md:order-1 space-y-4 leading-relaxed opacity-90 text-sm md:text-base"
+                >
+                    <h2 class="text-2xl font-serif text-custom-gold mb-2">
+                        Wenn Träume wachsen: Laura & ich
+                    </h2>
+                    <p>
+                        Dass mein Geschäft <strong
+                            class="text-custom-gold font-normal"
+                            >Kosmetik Atelier Laura</strong
+                        > heißt, ist kein Zufall – Laura ist meine Tochter und mein
+                        ganzer Stolz. Als ich 2010 das Studio übernahm, war Laura
+                        noch ein kleines Mädchen. Sie war immer an meiner Seite und
+                        verbrachte unzählige Stunden bei mir im Geschäft. In fast
+                        jeder Ecke des Studios hat sie gespielt und all die Handgriffe,
+                        Düfte und Momente ganz unbewusst in sich aufgenommen.
+                    </p>
+                    <p>
+                        Schon als junge Heranwachsende begann sie, sich kreativ
+                        die Nägel zu gestalten. Damals bekam sie bei mir sogar
+                        ihren ersten komplett ausgestatteten
+                        Nageldesign-Arbeitsplatz. Heute zu sehen, wie aus diesen
+                        ersten Schritten eine echte, tief sitzende berufliche
+                        Leidenschaft geworden ist, berührt mich zutiefst.
+                    </p>
+                    <p>
+                        Nach der Schule schlug Laura zunächst einen anderen Weg
+                        ein und begann ein Studium im Bauingenieurwesen. Doch
+                        sie spürte, wo ihre echten Wurzeln liegen, brach das
+                        Studium ab und absolvierte im Frühjahr 2026 an derselben
+                        Berliner Kosmetikschule wie ich ihre Ausbildung zur
+                        Ganzheitskosmetikerin und medizinischen Fußpflegerin.
+                    </p>
+                    <p>
+                        Heute bringt Laura frischen, modernen Wind in unser
+                        Atelier. Sie arbeitet geduldig und strukturiert und
+                        verbindet ihren präzisen, technischen Blick mit einem
+                        ausgeprägten Sinn für Schönheit. Ihre Kreativität und
+                        ihre Fähigkeit, Dinge zu sehen, die noch gar nicht
+                        existieren, begeistern mich immer wieder. Sie kümmert
+                        sich um unseren gesamten Auftritt nach außen und bringt
+                        als harmonische Waage Ruhe, Balance und feine Ästhetik
+                        in unser Team.
+                    </p>
+                    <p class="italic text-custom-gold/90 font-serif pt-2">
+                        Es ist für mich das größte Glück und eine tief
+                        empfundene Ehre, heute Hand in Hand mit meiner Tochter
+                        zu arbeiten.
+                    </p>
+                </div>
+
+                <div class="md:col-span-5 order-1 md:order-2">
+                    <div
+                        class="relative p-2 border border-custom-gold/30 rounded-sm bg-custom-gold/5"
+                    >
+                        <Image
+                            src={Laura}
+                            alt="Laura - Ganzheitskosmetikerin im Kosmetikatelier Laura."
+                            class="w-full h-auto rounded-sm object-cover shadow-lg"
+                        />
+                        <div class="mt-3 text-center">
+                            <span
+                                class="block font-serif text-lg text-custom-gold"
+                                >Laura</span
+                            >
+                            <span
+                                class="block text-xs uppercase tracking-widest opacity-75"
+                                >Ganzheitskosmetikerin & Fußpflegerin</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+                <div
+                    class="border border-custom-white/10 p-6 rounded-sm bg-custom-white/5"
+                >
+                    <h4
+                        class="font-serif text-lg text-custom-gold mb-3 flex items-center gap-2"
+                    >
+                        <span>🐾</span> Familienzusammenhalt
+                    </h4>
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        Auch meine beiden Söhne Oskar und Vincent gehören auf
+                        ihre Weise zu unserem Familienunternehmen: Oskar
+                        unterstützt uns bei handwerklichen Arbeiten, Vincent
+                        rund um IT und Technik. Was uns tief im Herzen
+                        verbindet, ist unser großes Herz für Tiere – zu Hause
+                        teilen wir unser Leben mit unseren Katzen und unserem
+                        Hund.
+                    </p>
+                </div>
+
+                <div
+                    class="border border-custom-gold/30 p-6 rounded-sm bg-custom-gold/5"
+                >
+                    <h4
+                        class="font-serif text-lg text-custom-gold mb-3 flex items-center gap-2"
+                    >
+                        <span>✨</span> Moderne Technik für deine Haut
+                    </h4>
+                    <p class="text-sm opacity-80 leading-relaxed">
+                        Um deiner Haut die beste Pflege zu schenken, vertrauen
+                        wir auf die hochwertige Qualität und die modernen
+                        apparativen Geräte von <strong class="text-custom-gold"
+                            >IONTO-COMED</strong
+                        >. Die Kombination aus sanften Inhaltsstoffen und
+                        innovativer Technik ermöglicht es uns, deiner Haut genau
+                        das zu geben, was sie braucht.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="text-center mb-8">
+                    <h2
+                        class="text-2xl md:text-3xl font-serif text-custom-gold uppercase tracking-tight mb-2"
+                    >
+                        Einblick in unser Atelier
+                    </h2>
+                    <p class="text-sm opacity-80">
+                        Erleben Sie die Wohlfühlatmosphäre vor Ort
+                    </p>
+                </div>
+
+                <div
+                    class="relative group max-w-3xl mx-auto bg-custom-gold/5 p-2 border border-custom-gold/30 rounded-sm"
+                >
+                    <div
+                        class="relative aspect-2/3 overflow-hidden rounded-sm cursor-pointer"
+                        id="main-gallery-view"
+                    >
+                        {
+                            galleryImages.map((img, index) => (
+                                <div
+                                    class={`gallery-slide absolute inset-0 transition-opacity duration-500 flex items-center justify-center ${index === 0 ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                                    data-index={index}
+                                >
+                                    <Image
+                                        src={img.src}
+                                        alt={img.alt}
+                                        class="w-full h-full object-cover"
+                                    />
+                                </div>
+                            ))
+                        }
+
+                        <div
+                            class="absolute bottom-3 right-3 z-20 bg-black/60 text-custom-gold p-2 rounded-full opacity-80 group-hover:opacity-100 transition-opacity"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Pfeile -->
+                    <button
+                        id="prev-btn"
+                        aria-label="Vorheriges Bild"
+                        class="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-custom-gold hover:text-custom-green text-custom-gold p-2 rounded-full transition-all duration-200"
+                    >
+                        &#10094;
+                    </button>
+                    <button
+                        id="next-btn"
+                        aria-label="Nächstes Bild"
+                        class="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-custom-gold hover:text-custom-green text-custom-gold p-2 rounded-full transition-all duration-200"
+                    >
+                        &#10095;
+                    </button>
+                </div>
+
+                <!-- Thumbnails -->
+                <div
+                    class="flex justify-start sm:justify-center gap-3 mt-4 max-w-3xl mx-auto overflow-x-auto py-2 custom-scrollbar"
+                >
+                    {
+                        galleryImages.map((img, index) => (
+                            <button
+                                class={`thumb-btn relative w-14 h-14 shrink-0 rounded-sm overflow-hidden border-2 transition-all duration-200 ${index === 0 ? "border-custom-gold scale-105" : "border-transparent opacity-60"}`}
+                                data-index={index}
+                            >
+                                <Image
+                                    src={img.src}
+                                    alt={img.alt}
+                                    class="w-full h-full object-cover"
+                                />
+                            </button>
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div
+                id="fullscreen-modal"
+                class="fixed inset-0 z-50 bg-black/95 hidden flex-col items-center justify-center p-4"
+            >
+                <button
+                    id="close-modal"
+                    class="absolute top-6 right-6 text-custom-gold text-3xl font-bold hover:scale-110 transition-transform"
+                    aria-label="Schließen"
+                >
+                    &times;
+                </button>
+
+                <div
+                    class="relative max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center"
+                >
+                    <img
+                        id="modal-img"
+                        src=""
+                        alt="Vollbild Ansicht"
+                        class="max-w-full max-h-full object-contain rounded-sm"
+                    />
+                </div>
+
+                <button
+                    id="modal-prev"
+                    class="absolute left-6 top-1/2 -translate-y-1/2 text-custom-gold text-4xl p-2 hover:scale-125 transition-transform"
+                >
+                    &#10094;
+                </button>
+                <button
+                    id="modal-next"
+                    class="absolute right-6 top-1/2 -translate-y-1/2 text-custom-gold text-4xl p-2 hover:scale-125 transition-transform"
+                >
+                    &#10095;
+                </button>
+            </div>
+
+            <div class="text-center pt-8 border-t border-custom-gold/20">
+                <p
+                    class="text-lg md:text-xl font-serif text-custom-gold mb-4 italic"
+                >
+                    Komm an, atme durch, lausche der sanften Musik und schenke
+                    deinem Körper und deiner Seele eine wohlverdiente Auszeit.
+                </p>
+                <p class="text-base font-semibold mb-8">
+                    Wir freuen uns von Herzen auf dich!<br />
+                    <span class="font-serif text-xl text-custom-gold"
+                        >Katarzyna & Laura</span
+                    >
+                </p>
+
+                <a
+                    href="/kontakt"
+                    class="inline-block w-full sm:w-auto px-8 py-4 rounded-lg border border-custom-gold text-custom-gold font-sans text-xs md:text-sm tracking-widest uppercase gold-glow hover:gold-glow-lg hover:bg-custom-gold hover:text-custom-green transition-all duration-300"
+                >
+                    Jetzt kontaktieren und Termin vereinbaren
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll<HTMLElement>(".gallery-slide");
+        const thumbs =
+            document.querySelectorAll<HTMLButtonElement>(".thumb-btn");
+        const prevBtn = document.getElementById("prev-btn");
+        const nextBtn = document.getElementById("next-btn");
+        const mainView = document.getElementById("main-gallery-view");
+
+        const modal = document.getElementById("fullscreen-modal");
+        const modalImg = document.getElementById(
+            "modal-img",
+        ) as HTMLImageElement;
+        const closeModal = document.getElementById("close-modal");
+        const modalPrev = document.getElementById("modal-prev");
+        const modalNext = document.getElementById("modal-next");
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateGallery(index: number) {
+            currentIndex = (index + totalSlides) % totalSlides;
+
+            slides.forEach((slide, i) => {
+                if (i === currentIndex) {
+                    slide.classList.remove("opacity-0", "z-0");
+                    slide.classList.add("opacity-100", "z-10");
+                } else {
+                    slide.classList.remove("opacity-100", "z-10");
+                    slide.classList.add("opacity-0", "z-0");
+                }
+            });
+
+            thumbs.forEach((thumb, i) => {
+                if (i === currentIndex) {
+                    thumb.classList.add("border-custom-gold", "scale-105");
+                    thumb.classList.remove("border-transparent", "opacity-60");
+                } else {
+                    thumb.classList.remove("border-custom-gold", "scale-105");
+                    thumb.classList.add("border-transparent", "opacity-60");
+                }
+            });
+
+            if (modalImg && !modal?.classList.contains("hidden")) {
+                const activeImg = slides[currentIndex].querySelector("img");
+                if (activeImg) modalImg.src = activeImg.src;
+            }
+        }
+
+        // Button Events
+        prevBtn?.addEventListener("click", () =>
+            updateGallery(currentIndex - 1),
+        );
+        nextBtn?.addEventListener("click", () =>
+            updateGallery(currentIndex + 1),
+        );
+
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                const idx = parseInt(thumb.dataset.index || "0", 10);
+                updateGallery(idx);
+            });
+        });
+
+        mainView?.addEventListener("click", () => {
+            const activeImg = slides[currentIndex].querySelector("img");
+            if (activeImg && modal && modalImg) {
+                modalImg.src = activeImg.src;
+                modal.classList.remove("hidden");
+                modal.classList.add("flex");
+            }
+        });
+
+        closeModal?.addEventListener("click", () => {
+            modal?.classList.add("hidden");
+            modal?.classList.remove("flex");
+        });
+
+        modalPrev?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            updateGallery(currentIndex - 1);
+        });
+
+        modalNext?.addEventListener("click", (e) => {
+            e.stopPropagation();
+            updateGallery(currentIndex + 1);
+        });
+
+        document.addEventListener("keydown", (e) => {
+            if (
+                e.key === "Escape" &&
+                modal &&
+                !modal.classList.contains("hidden")
+            ) {
+                modal.classList.add("hidden");
+                modal.classList.remove("flex");
+            }
+            if (e.key === "ArrowLeft") updateGallery(currentIndex - 1);
+            if (e.key === "ArrowRight") updateGallery(currentIndex + 1);
+        });
+    });
+</script>
+
+<style is:global>
+    .custom-scrollbar::-webkit-scrollbar {
+        height: 6px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #c5a059;
+        border-radius: 4px;
+        opacity: 0.7;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #e0c078;
+    }
+
+    .custom-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: #c5a059 rgba(255, 255, 255, 0.05);
+    }
+</style>
