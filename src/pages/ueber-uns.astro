@@ -3,8 +3,8 @@ import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Eucalyptus from "../assets/Eucalyptus.svg";
 
-import Katarzyna from "../assets/Katarzyna.jpeg";
-import Laura from "../assets/Laura.jpeg";
+import Katarzyna from "../assets/Katarzyna.webp";
+import Laura from "../assets/Laura.webp";
 
 import Studio1 from "../assets/StudioImages/bigwork2.webp";
 import Studio2 from "../assets/StudioImages/entrance.webp";
@@ -288,10 +288,10 @@ const galleryImages = [
                 </div>
 
                 <div
-                    class="relative group max-w-3xl mx-auto bg-custom-gold/5 p-2 border border-custom-gold/30 rounded-sm"
+                    class="relative group max-w-sm md:max-w-md mx-auto bg-custom-gold/5 p-2 border border-custom-gold/30 rounded-sm"
                 >
                     <div
-                        class="relative aspect-2/3 overflow-hidden rounded-sm cursor-pointer"
+                        class="relative aspect-2/3 md:aspect-3/4 overflow-hidden rounded-sm cursor-pointer"
                         id="main-gallery-view"
                     >
                         {
@@ -373,7 +373,7 @@ const galleryImages = [
             >
                 <button
                     id="close-modal"
-                    class="absolute top-6 right-6 text-custom-gold text-3xl font-bold hover:scale-110 transition-transform"
+                    class="absolute top-4 right-4 z-30 text-custom-gold text-3xl font-bold hover:scale-110 transition-transform"
                     aria-label="Schließen"
                 >
                     &times;
