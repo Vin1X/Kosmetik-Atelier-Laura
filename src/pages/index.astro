@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Ionto from "../components/Ionto.astro";
 import Faq from "../components/Faq.astro";
+import Glow from "../components/Glow.astro";
 
 import { Image } from "astro:assets";
 import indexPhoto from "../assets/index_photo.webp";
@@ -192,6 +193,12 @@ import work from "../assets/StudioImages/work.webp";
 
     <Ionto />
 
+    <Glow />
+
+    <div class="mt-8 flex justify-center">
+        <Eucalyptus class="fill-custom-gold" />
+    </div>
+
     <section class="px-4 pt-8 md:pt-16 bg-custom-green section-depth-alt">
         <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
             <div
@@ -279,7 +286,7 @@ import work from "../assets/StudioImages/work.webp";
             </div>
         </div>
 
-        <div class="mt-8 flex justify-center">
+        <div class="mt-8 flex justify-center rotate-180">
             <Eucalyptus class="fill-custom-gold" />
         </div>
     </section>
