@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
+import Eucalyptus from "../assets/Eucalyptus.svg";
+
 import glassskin_before from "../assets/glassskin_before.webp";
 import glassskin_after from "../assets/glassskin_after.webp";
 import glowsolution_before from "../assets/glowsolution_before.webp";
@@ -8,7 +10,7 @@ import glowsolution_after from "../assets/glowsolution_after.webp";
 ---
 
 <section
-    class="pt-16 bg-custom-green text-custom-white relative overflow-hidden"
+    class="relative overflow-hidden pt-8 px-4 bg-custom-green section-depth"
 >
     <div
         class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 md:space-y-28"
@@ -20,7 +22,7 @@ import glowsolution_after from "../assets/glowsolution_after.webp";
                 <span
                     class="text-custom-gold font-serif text-sm md:text-base tracking-widest uppercase block"
                 >
-                    HYDRODERMBEHANDLUNG
+                    AQUAFACIAL
                 </span>
                 <h2
                     class="font-serif text-3xl sm:text-4xl md:text-5xl text-custom-gold leading-tight"
@@ -30,7 +32,7 @@ import glowsolution_after from "../assets/glowsolution_after.webp";
                 <p
                     class="text-custom-white/90 leading-relaxed text-base md:text-lg"
                 >
-                    Die intensive 4-in-1-Hydrodermbehandlung von IONTO-COMED
+                    Die intensive 4-in-1 Aquafacial-Behandlung von Ionto-Comed®
                     vereint Reinigung, Peeling, intensive Wirkstoffversorgung
                     und Feuchtigkeit in einer Behandlung. Die Haut wird
                     gründlich gereinigt, von abgestorbenen Hautzellen befreit
@@ -200,5 +202,9 @@ import glowsolution_after from "../assets/glowsolution_after.webp";
                 </ul>
             </div>
         </article>
+    </div>
+
+    <div class="mt-12 flex justify-center">
+        <Eucalyptus class="fill-custom-gold rotate-180" />
     </div>
 </section>

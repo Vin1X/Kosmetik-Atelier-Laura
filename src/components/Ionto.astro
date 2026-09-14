@@ -1,8 +1,6 @@
 ---
 import { Image } from "astro:assets";
 
-import Eucalyptus from "../assets/Eucalyptus.svg";
-
 import microneedling_after from "../assets/microneedling_after.webp";
 import microneedling_before from "../assets/microneedling_before.webp";
 import microdermabrasion_after from "../assets/microdermabrasion_after.webp";
@@ -10,38 +8,9 @@ import microdermabrasion_before from "../assets/microdermabrasion_before.webp";
 ---
 
 <section
-    class="relative overflow-hidden pt-16 px-4 bg-custom-green section-depth"
+    class="pt-16 bg-custom-green text-custom-white relative overflow-hidden"
 >
-    <div class="absolute inset-0 overflow-hidden -z-10 pointer-events-none">
-        <div
-            class="absolute top-1/3 -right-40 w-md h-112 rounded-full bg-custom-gold/8 blur-3xl"
-        >
-        </div>
-        <div
-            class="absolute -bottom-32 -left-32 w-96 h-96 rounded-full bg-custom-light-gold/5 blur-3xl"
-        >
-        </div>
-    </div>
-
     <div class="relative z-10 max-w-6xl mx-auto reveal">
-        <div class="text-center max-w-2xl mx-auto mb-16 md:mb-20">
-            <p
-                class="text-custom-gold text-xs md:text-sm tracking-[0.3em] uppercase mb-3 font-sans"
-            >
-                Ionto-Comed® Gerätetechnik
-            </p>
-            <h2 class="font-serif text-3xl md:text-5xl text-custom-white mb-4">
-                Unsere gefragtesten Behandlungen
-            </h2>
-            <p
-                class="font-serif text-custom-white/70 text-base md:text-lg italic font-light"
-            >
-                Hautpflege auf höchstem Niveau – präzise apparative Kosmetik für
-                sofort sichtbare Frische, tiefenwirksame Regeneration und einen
-                strahlenden Teint.
-            </p>
-        </div>
-
         <div class="flex flex-col gap-24 md:gap-28">
             <!-- 1. MICRONEEDLING -->
             <div
@@ -203,6 +172,11 @@ import microdermabrasion_before from "../assets/microdermabrasion_before.webp";
                 </div>
             </div>
 
+            <div
+                class="w-full h-px bg-linear-to-r from-transparent via-custom-gold/30 to-transparent"
+            >
+            </div>
+
             <!-- 2. MIKRODERMABRASION -->
             <div
                 class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center"
@@ -362,9 +336,5 @@ import microdermabrasion_before from "../assets/microdermabrasion_before.webp";
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="mt-12 flex justify-center">
-        <Eucalyptus class="fill-custom-gold rotate-180" />
     </div>
 </section>
