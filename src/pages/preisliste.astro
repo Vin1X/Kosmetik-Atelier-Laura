@@ -5,11 +5,19 @@ type Extra = { label: string; price: string };
 type Item = {
   name: string;
   price: string;
+  originalPrice?: string;
   description?: string;
   extras?: Extra[];
   packages?: Extra[];
 };
-type Category = { title: string; description?: string; items: Item[] };
+
+type Category = {
+  title: string;
+  description?: string;
+  items: Item[];
+  isNew?: boolean;
+  open?: boolean;
+};
 
 const categories: Category[] = [
   {
@@ -56,6 +64,34 @@ const categories: Category[] = [
     ],
   },
   {
+    title: "Glow Solution",
+    isNew: true,
+    items: [
+      {
+        name: "Gesicht",
+        price: "160 €",
+        originalPrice: "180 €",
+        description: "Einführungspreis gültig für kurze Zeit",
+      },
+      { name: "Zusätze", price: "" },
+      { name: "Wirkstoffampulle", price: "+ 8 €" },
+    ],
+  },
+  {
+    title: "Glass Skin",
+    isNew: true,
+    items: [
+      {
+        name: "Gesicht",
+        price: "195 €",
+        originalPrice: "220 €",
+        description: "Einführungspreis gültig für kurze Zeit",
+      },
+      { name: "Zusätze", price: "" },
+      { name: "Wirkstoffampulle", price: "+ 8 €" },
+    ],
+  },
+  {
     title: "Microneedling",
     description: "Inkl. Wirkstoffkonzentrat & Bio-Cellulose-Maske",
     items: [
@@ -94,7 +130,6 @@ const categories: Category[] = [
       { name: "Mit Stahlnadeln", price: "+ 10 €" },
     ],
   },
-
   {
     title: "Kristall Mikrodermabrasion",
     description: "", // #TODO add descr
@@ -237,9 +272,16 @@ const categories: Category[] = [
             open={cat.open}
           >
             <summary class="flex justify-between items-center px-6 py-4 cursor-pointer list-none select-none transition-colors duration-200 hover:bg-white/5">
-              <h2 class="font-serif text-xl text-custom-gold tracking-wide font-normal">
-                {cat.title}
-              </h2>
+              <div class="flex items-center gap-3">
+                <h2 class="font-serif text-xl text-custom-gold tracking-wide font-normal">
+                  {cat.title}
+                </h2>
+                {cat.isNew && (
+                  <span class="text-[10px] uppercase font-sans tracking-widest px-2 py-0.5 rounded-full bg-custom-gold/20 text-custom-gold border border-custom-gold/40 font-semibold">
+                    Neu
+                  </span>
+                )}
+              </div>
               <svg
                 class="w-4 h-4 text-custom-gold/70 transition-transform duration-300 group-open:rotate-180"
                 fill="none"
@@ -277,9 +319,18 @@ const categories: Category[] = [
                           <span class="text-custom-white font-sans text-sm font-medium tracking-wide">
                             {item.name}
                           </span>
-                          <span class="text-custom-gold font-sans font-semibold text-sm tracking-tight tabular-nums whitespace-nowrap">
-                            {item.price}
-                          </span>
+                          <div class="flex items-baseline gap-2 whitespace-nowrap">
+                            {item.originalPrice && (
+                              <span class="text-xs text-custom-light-white/40 line-through tabular-nums">
+                                {item.originalPrice}
+                              </span>
+                            )}
+                            <span
+                              class={`font-sans font-semibold text-sm tracking-tight tabular-nums ${item.originalPrice ? "text-custom-gold" : "text-custom-gold"}`}
+                            >
+                              {item.price}
+                            </span>
+                          </div>
                         </div>
 
                         {item.description && (
