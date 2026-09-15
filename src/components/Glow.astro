@@ -1,0 +1,210 @@
+---
+import { Image } from "astro:assets";
+
+import Eucalyptus from "../assets/Eucalyptus.svg";
+
+import glassskin_before from "../assets/glassskin_before.webp";
+import glassskin_after from "../assets/glassskin_after.webp";
+import glowsolution_before from "../assets/glowsolution_before.webp";
+import glowsolution_after from "../assets/glowsolution_after.webp";
+---
+
+<section
+    class="relative overflow-hidden pt-8 px-4 bg-custom-green section-depth"
+>
+    <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 md:space-y-28"
+    >
+        <article
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center"
+        >
+            <div class="lg:col-span-7 space-y-6">
+                <span
+                    class="text-custom-gold font-serif text-sm md:text-base tracking-widest uppercase block"
+                >
+                    AQUAFACIAL
+                </span>
+                <h2
+                    class="font-serif text-3xl sm:text-4xl md:text-5xl text-custom-gold leading-tight"
+                >
+                    GlowSolution
+                </h2>
+                <p
+                    class="text-custom-white/90 leading-relaxed text-base md:text-lg"
+                >
+                    Die intensive 4-in-1 Aquafacial-Behandlung von Ionto-Comed®
+                    vereint Reinigung, Peeling, intensive Wirkstoffversorgung
+                    und Feuchtigkeit in einer Behandlung. Die Haut wird
+                    gründlich gereinigt, von abgestorbenen Hautzellen befreit
+                    und gezielt mit hochwertigen Wirkstoffen versorgt. Das
+                    Ergebnis: ein frischer, strahlender Teint und ein sichtbar
+                    verfeinertes Hautbild.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    {
+                        [
+                            "Intensive Reinigung & Peeling",
+                            "Tiefenwirksame Wirkstoffversorgung",
+                            "Intensive Feuchtigkeit",
+                            "Frischer Glow",
+                            "Verfeinerung des Hautbildes",
+                            "Ebenmäßiger Teint",
+                        ].map((item) => (
+                            <li class="flex items-center gap-3 text-sm md:text-base text-custom-white/90">
+                                <span class="w-2 h-2 rounded-full bg-custom-gold shrink-0" />
+                                <span>{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+
+            <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                <div
+                    class="relative aspect-3/4 bg-black/20 border border-custom-gold/30 rounded-2xl overflow-hidden flex flex-col justify-between p-4 group hover:border-custom-gold transition-colors duration-300"
+                >
+                    <span
+                        class="absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                    >
+                        Vorher
+                    </span>
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-white text-[10px] font-sans tracking-widest px-2 py-0.5 whitespace-nowrap"
+                    >
+                        KI Generiert
+                    </span>
+                    <Image
+                        src={glowsolution_before}
+                        alt="Glow Solution Hautzustand Vorher."
+                        class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
+                    />
+                </div>
+                <div
+                    class="relative aspect-3/4 bg-black/20 border border-custom-gold/30 rounded-2xl overflow-hidden flex flex-col justify-between p-4 group hover:border-custom-gold transition-colors duration-300"
+                >
+                    <span
+                        class="absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                    >
+                        Nachher
+                    </span>
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-white text-[10px] font-sans tracking-widest px-2 py-0.5 whitespace-nowrap"
+                    >
+                        KI Generiert
+                    </span>
+                    <Image
+                        src={glowsolution_after}
+                        alt="Glow Solution Ergebnis Nachher."
+                        class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
+                    />
+                </div>
+            </div>
+        </article>
+
+        <div
+            class="w-full h-px bg-linear-to-r from-transparent via-custom-gold/30 to-transparent"
+        >
+        </div>
+
+        <article
+            class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center"
+        >
+            <div
+                class="lg:col-span-5 grid grid-cols-2 gap-4 order-2 lg:order-1"
+            >
+                <div
+                    class="relative aspect-3/4 bg-black/20 border border-custom-gold/30 rounded-2xl overflow-hidden flex flex-col justify-between p-4 group hover:border-custom-gold transition-colors duration-300"
+                >
+                    <span
+                        class="absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                    >
+                        Vorher
+                    </span>
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-white text-[10px] font-sans tracking-widest px-2 py-0.5 whitespace-nowrap"
+                    >
+                        KI Generiert
+                    </span>
+                    <Image
+                        src={glassskin_before}
+                        alt="Glass Skin Hautzustand Vorher."
+                        class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
+                    />
+                </div>
+                <div
+                    class="relative aspect-3/4 bg-black/20 border border-custom-gold/30 rounded-2xl overflow-hidden flex flex-col justify-between p-4 group hover:border-custom-gold transition-colors duration-300"
+                >
+                    <span
+                        class="absolute top-3 right-3 z-10 bg-black/60 backdrop-blur-md text-custom-white text-[10px] font-sans tracking-widest uppercase px-2 py-1 rounded"
+                    >
+                        Nachher
+                    </span>
+                    <span
+                        class="absolute bottom-3 left-1/2 -translate-x-1/2 z-10 text-white text-[10px] font-sans tracking-widest px-2 py-0.5 whitespace-nowrap"
+                    >
+                        KI Generiert
+                    </span>
+                    <Image
+                        src={glassskin_after}
+                        alt="Glass Skin Ergebnis Nachher."
+                        class="absolute inset-0 w-full h-full object-cover object-bottom origin-bottom"
+                    />
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+                <span
+                    class="text-custom-gold font-serif text-sm md:text-base tracking-widest uppercase block"
+                >
+                    INTENSIVBEHANDLUNG & MICRONEEDLING
+                </span>
+                <h2
+                    class="font-serif text-3xl sm:text-4xl md:text-5xl text-custom-gold leading-tight"
+                >
+                    Glass Skin
+                </h2>
+                <p
+                    class="text-custom-white/90 leading-relaxed text-base md:text-lg"
+                >
+                    Glass Skin baut auf der GlowSolution auf und geht noch einen
+                    Schritt weiter. Durch die zusätzliche Anwendung von
+                    Microneedling wird die Behandlung intensiviert: Feinste
+                    Mikrokanäle regen gezielt die natürlichen
+                    Regenerationsprozesse der Haut an und unterstützen die
+                    Kollagenbildung sowie die Aufnahme ausgewählter Wirkstoffe.
+                </p>
+                <p
+                    class="text-custom-white/90 leading-relaxed text-base md:text-lg"
+                >
+                    So entsteht der bekannte Glass-Skin-Effekt: eine besonders
+                    glatte, pralle, ebenmäßige und intensiv strahlende Haut mit
+                    einem sichtbar frischen und gepflegten Erscheinungsbild.
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    {
+                        [
+                            "Intensiver Glass-Skin-Effekt",
+                            "Glatte & pralle Haut",
+                            "Anregung der Kollagenbildung",
+                            "Intensivierte Wirkstoffaufnahme",
+                            "Verfeinerung der Hautstruktur",
+                            "Ebenmäßiger, strahlender Teint",
+                            "Anregung der Hautregeneration",
+                        ].map((item) => (
+                            <li class="flex items-center gap-3 text-sm md:text-base text-custom-white/90">
+                                <span class="w-2 h-2 rounded-full bg-custom-gold shrink-0" />
+                                <span>{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <div class="mt-12 flex justify-center">
+        <Eucalyptus class="fill-custom-gold rotate-180" />
+    </div>
+</section>
